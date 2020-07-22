@@ -5,31 +5,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mário Guilherme</title>
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
 
 <body>
+    <div class="menu">
+        <nav class="navbar navbar-expand navbar-dark">
+            <div class="navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" href=".sobre">SOBRE<span class="sr-only"></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" href="#portfolio">PORTFÓLIO<span class="sr-only"></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" href="#contato">CONTATO<span class="sr-only"></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" href="#projetos">PROJETOS<span class="sr-only"></span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="jumbotron">
+        <h1 class="display-4 font-weight-bold text-light text-center">Mário Guilherme de Andrade Rodrigues</h1>
+        <h4 class="text-light text-center font-weight-bold">Técnico em Desenvolvimento de Sistemas</h4>
+    </div>
 
-    <input id="texto" type="text">
+    <div class="jumbotron-fluid sobre text-light">
+        <h2 class="text-center text-light">QUEM SOU</h2>
+        <p class="text-justify">
+            Estudante dos cursos Técnico em Agropecuária Integrado ao Ensino Médio e Técnico em Desenvolvimento de Sistemas na Instituição ETEC Professora Helcy Moreira Aguiar, na cidade de Cafelândia, São Paulo. Sou de uma formação mais centrada ao BACK-END, sendo
+            mais adaptável ao WS, como criação de Banco de Dados que seria o MySQL e a linguagem de programação como o PHP, tendo um gosto maior por lógica de programação como também o JavaScript. Apresentando pouco dominio na criação de design e dificuldades
+            em idéias do mesmo.
+        </p>
+    </div>
+    <div id="donutchart" style="width: 800px; height: 400px;"></div>
 
-    <button onclick="funcao()">
-        tester
-    </button>
 
-    <p id="textoee">.</p>
-
-    <script>
-        function funcao() {
-            let texto3 = document.getElementById("texto").value
-
-            let texto1 = `${texto3}`
-            document.getElementById("textoee").innerHTML = texto1
-        }
-    </script>
+    <!--------------------------------------------------------RODAPÉ---------------->
+    <div class="card rodape text-center mt-3">
+        <div class="card-body">
+            <h5 class="card-title text-light">Desenvolvido por Mário Guilherme de Andrade Rodrigues</h5>
+            <p class="card-text text-light">Cafelândia - SP, Brasil</p>
+        </div>
+        <div class="card-footer text-light">
+            Todos os Direitos Reservados <br> © 2020-2022
+        </div>
+    </div>
+    <!--------------------------------------------------------RODAPÉ---------------->
 
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/grafico.js"></script>
+
 </body>
 
 </html>
