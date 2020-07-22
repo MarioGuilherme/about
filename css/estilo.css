@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 body {
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
 }
 
 .jumbotron {
@@ -11,17 +11,7 @@ body {
     padding-bottom: 16rem;
 }
 
-.nav-item {
-    margin-left: 8px;
-}
-
-hr {
-    visibility: hidden;
-}
-
-.menu {
-    position: fixed;
-    width: 100%;
+.navbar {
     background-color: rgba(30, 30, 34, 0.87);
 }
 
@@ -29,28 +19,39 @@ hr {
     background-color: #1a1a1a;
 }
 
-.sobre {
-    background-color: rgb(36, 59, 87);
+a.botoes-navbar {
+    color: #fff;
+    margin-left: 1rem;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+    0s;
+}
+
+a.botoes-navbar:hover {
+    color: #000 !important;
+    background-color: transparent;
+    text-shadow: nfour;
+}
+
+a.botoes-navbar:hover:before {
+    right: 0%;
+    left: auto;
     width: 100%;
 }
 
-.jumbotron-fluid {
-    padding-left: 50px;
-    padding-right: 50px;
-}
-
-p {
-    margin: 0px;
-}
-
-.jumbotron-fluid h2 {
-    padding-top: 20px;
-}
-
-.jumbotron-fluid p {
-    padding-bottom: 10px;
-}
-
-.formacoes {
-    background-color: black;
+a.botoes-navbar:before {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 0px;
+    z-index: -1;
+    content: '';
+    color: #000 !important;
+    background: #F7CA18;
+    transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+    0s;
 }

@@ -11,32 +11,34 @@
 </head>
 
 <body>
-    <div class="menu">
-        <nav class="navbar navbar-expand navbar-dark">
-            <div class="navbar-collapse">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link font-weight-bold" href=".sobre">SOBRE<span class="sr-only"></span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link font-weight-bold" href="#portfolio">PORTFÓLIO<span class="sr-only"></span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link font-weight-bold" href="#contato">CONTATO<span class="sr-only"></span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link font-weight-bold" href="#projetos">PROJETOS<span class="sr-only"></span></a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </div>
+    <nav class="navbar navbar-expand-sm navbar-dark fixed-top">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExample03">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link botoes-navbar" href="#sobre">SOBRE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link botoes-navbar" href="#portfolio">TESTE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link botoes-navbar" href="#contatos">CONTATOS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link botoes-navbar" href="#projetos">PROJETOS</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
     <div class="jumbotron">
         <h1 class="display-4 font-weight-bold text-light text-center">Mário Guilherme de Andrade Rodrigues</h1>
-        <h4 class="text-light text-center font-weight-bold">Técnico em Desenvolvimento de Sistemas</h4>
+        <h5 class="text-light text-center ">Técnico em Desenvolvimento de Sistemas</h5>
     </div>
 
-    <div class="jumbotron-fluid sobre text-light">
+    <div class="jumbotron-fluid sobre text-light" id="sobre">
         <h2 class="text-center text-light">QUEM SOU</h2>
         <p class="text-justify">
             Estudante dos cursos Técnico em Agropecuária Integrado ao Ensino Médio e Técnico em Desenvolvimento de Sistemas na Instituição ETEC Professora Helcy Moreira Aguiar, na cidade de Cafelândia, São Paulo. Sou de uma formação mais centrada ao BACK-END, sendo
@@ -44,9 +46,6 @@
             em idéias do mesmo.
         </p>
     </div>
-    <div id="donutchart" style="width: 800px; height: 400px;"></div>
-
-
     <!--------------------------------------------------------RODAPÉ---------------->
     <div class="card rodape text-center mt-3">
         <div class="card-body">
