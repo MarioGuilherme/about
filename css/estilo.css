@@ -1,8 +1,12 @@
+body {
+    text-align: justify;
+}
+
 .jumbotron {
     background: url(../img/jumbotron.jpg) no-repeat center top;
-    text-align: center;
-    background-position: center center;
+    background-position: center;
     background-size: cover;
+    margin: 0px;
     padding-top: 16rem;
     padding-bottom: 16rem;
 }
@@ -63,13 +67,27 @@ ul li :nth-child(1) {
     text-decoration: none;
 }
 
-@media (min-width: 1200px) {
-    .modal-yxl {
-        max-width: 95%;
-    }
+.ard {
+    background: linear-gradient(to left, rgb(204, 215, 230), rgb(177, 201, 235));
 }
 
 .img-etechday {
-    height: 35rem;
-    width: auto;
+    height: 20rem;
+    width: 20rem;
+}
+
+#portfolio {
+    background-color: rgb(243, 243, 243);
+}
+
+.foto-video {
+    padding: 0.25rem;
+}
+
+.modal-body {
+    padding: 25px;
+}
+
+.modal-fim {
+    padding: 7px;
 }
