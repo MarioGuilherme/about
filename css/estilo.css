@@ -1,17 +1,7 @@
 .jumbotron {
     background: url(../img/jumbotron.jpg) no-repeat center top;
     text-align: center;
-    background-attachment: relative;
     background-position: center center;
-    min-height: 500px;
-    width: 100%;
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
     padding-top: 16rem;
     padding-bottom: 16rem;
@@ -67,4 +57,19 @@ a.botoes-navbar:before {
 
 .conquistas {
     color: rgb(54, 75, 95);
+}
+
+ul li :nth-child(1) {
+    text-decoration: none;
+}
+
+@media (min-width: 1200px) {
+    .modal-yxl {
+        max-width: 95%;
+    }
+}
+
+.img-etechday {
+    height: 35rem;
+    width: auto;
 }
