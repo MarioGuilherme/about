@@ -1,6 +1,7 @@
 .jumbotron {
     background: url(../img/jumbotron.jpg);
     margin: 0px;
+    padding: 0px;
     background-size: cover;
     background-position: center;
     padding-top: 16rem;
@@ -52,5 +53,9 @@ a.botoes-navbar:before {
 
 .sobre {
     background-color: rgb(44, 62, 80);
-    padding: 30px;
+    padding: 10px;
+}
+
+.conquistas {
+    color: rgb(54, 75, 95);
 }
