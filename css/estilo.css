@@ -2,6 +2,7 @@
     background: url(../img/jumbotron.jpg);
     margin: 0px;
     background-size: cover;
+    background-position: center;
     padding-top: 16rem;
     padding-bottom: 16rem;
 }
