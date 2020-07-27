@@ -51,13 +51,5 @@ a.botoes-navbar:before {
 
 .sobre {
     background-color: rgb(44, 62, 80);
-}
-
-.inv {
-    visibility: hidden;
-}
-
-.mt-6,
-.mt-6 {
-    margin-top: 4rem !important;
+    padding: 45px;
 }
