@@ -3,12 +3,18 @@ body {
 }
 
 .jumbotron {
-    background: url(../img/jumbotron.jpg) no-repeat center top;
+    background: url(../img/jumbotron.jpg) no-repeat;
     background-position: center;
     background-size: cover;
     margin: 0px;
     padding-top: 16rem;
     padding-bottom: 16rem;
+}
+
+@media (max-width:800px) {
+    .jumbotron {
+        width: 800px;
+    }
 }
 
 .navbar {
@@ -17,6 +23,11 @@ body {
 
 .rodape {
     background-color: #1a1a1a;
+}
+
+.botao-navbar {
+    margin-left: 15px;
+    margin-bottom: 10px;
 }
 
 a.botoes-navbar {
@@ -54,9 +65,9 @@ a.botoes-navbar:before {
     transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1) 0s;
 }
 
-.sobre {
+#sobre {
     background-color: rgb(44, 62, 80);
-    padding: 10px;
+    padding: 15px;
 }
 
 .conquistas {
