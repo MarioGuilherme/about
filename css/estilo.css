@@ -12,7 +12,7 @@ body {
 }
 
 @media (max-width:800px) {
-    .jumbotron {
+    body {
         width: 800px;
     }
 }
