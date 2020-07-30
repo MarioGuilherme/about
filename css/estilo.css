@@ -11,12 +11,6 @@ body {
     padding-bottom: 16rem;
 }
 
-@media (max-width:600px) {
-    .jumbotron {
-        background-size: 100%;
-    }
-}
-
 .navbar {
     background-color: rgba(30, 30, 34, 0.87);
 }
@@ -72,6 +66,15 @@ a.botoes-navbar:before {
 
 .conquistas {
     color: rgb(54, 75, 95);
+}
+
+.img {
+    height: 325px;
+}
+
+ul li {
+    padding-bottom: 3px;
+    padding-top: 3px;
 }
 
 ul li :nth-child(1) {
