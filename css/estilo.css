@@ -11,9 +11,11 @@ body {
     padding-bottom: 16rem;
 }
 
-@media (max-width:800px) {
-    body {
-        width: 150%;
+@media (max-width:600px) {
+    .jumbotron {
+        background-size: 100vh;
+        padding-top: 3.6rem;
+        padding-bottom: 3.6rem;
     }
 }
 
