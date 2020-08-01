@@ -68,10 +68,6 @@ a.botoes-navbar:before {
     color: rgb(54, 75, 95);
 }
 
-.img {
-    height: 325px;
-}
-
 ul li {
     padding-bottom: 3px;
     padding-top: 3px;
@@ -104,4 +100,9 @@ ul li :nth-child(1) {
 
 .modal-fim {
     padding: 7px;
+}
+
+.logos {
+    height: 325px;
+    width: 400px;
 }
