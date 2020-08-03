@@ -1,0 +1,52 @@
+body {
+    background-color: #f5fdff;
+}
+
+#conta {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#divisor {
+    border-top: 2px black solid;
+}
+
+#h1 {
+    font-size: 45px;
+}
+
+#calc {
+    border: black solid 3px;
+}
+
+#b,
+#a,
+#c,
+#delta,
+#bn,
+#a2 {
+    width: 50px;
+    height: 35px;
+}
+
+#delta2 {
+    width: 75px;
+    height: 35px;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input {
+    text-align: center;
+}
+
+input:focus {
+    background: #94dbff;
+}
+
+.operacoes {
+    border: 1px solid #dee2e6;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0.7);
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Area Trapézio</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <h1>
+        Calculadora do Trapézio
+    </h1> <br><br>
+    <div id="ex">
+        <h3>EXEMPLO DA FÓRMULA</h3>
+        <div id="img">
+            <img id="desenho" src="desenho.png">
+        </div>
+        <div id="base">
+            <table>
+                <tr>
+                    <tr>
+                        <td rowspan="3" id="dividendo1">A</td>
+                        <td rowspan="3" id="dividendo1">=</td>
+                        <td id="dividendo">(B+b).h</td>
+                    </tr>
+                    <tr>
+                        <td id="divisor1">
+                            2
+                        </td>
+                    </tr>
+            </table>
+            <div id="ext">
+                <table id="sig">
+                    <tr>
+                        <td>
+                            <font id="font">A</font>
+                            <font id="font1"> = Área</font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <font id="font">B</font>
+                            <font id="font1"> = Base Maior</font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <font id="font">b</font>
+                            <font id="font1"> = Base Menor</font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <font id="font">h</font>
+                            <font id="font1"> = Altura</font>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div id="calc">
+        <h3>
+            CALCULADORA
+        </h3>
+        <center>
+            <table>
+                <tr>
+                    <tr>
+                        <td rowspan="3"><input id="A" type="number"></td>
+                        <td rowspan="3">=</td>
+                        <td>(<input id="B" type="number"> + <input type="number" id="b">).<input type="number" id="h"></td>
+                    </tr>
+                    <tr>
+                        <td id="s">2
+                        </td>
+                    </tr>
+            </table>
+        </center>
+        <br><br>
+        <center>
+            <button id="botao" onclick="calcular()">
+                Calcular 
+            </button>
+        </center>
+        <h4>
+            RESULTADO:
+        </h4>
+        <p id="resultado">.</p>
+    </div>
+
+    <script>
+        function calcular() {
+            let A = document.getElementById('A').value
+            let B = document.getElementById('B').value
+            let b = document.getElementById('b').value
+            let h = document.getElementById('h').value
+
+            if (A == "" && B == "" && b == "" && h == "") {
+
+                let texto = `Por favor, insira os valores afim de encontrar a incógnita`
+                document.getElementById('resultado').innerHTML = texto
+
+            } else if (A == "") {
+
+                let B = parseInt(document.getElementById('B').value)
+                let b = parseInt(document.getElementById('b').value)
+
+                B = B + b
+                B = B * h
+                A = B / 2
+
+                A = parseFloat(A.toFixed(1))
+
+                let texto = `Área é = ${A}`
+                document.getElementById('resultado').innerHTML = texto
+
+            } else if (B == "") {
+
+                A = A * 2
+                b = b * h
+                A = A - b
+                B = A / h
+
+                B = parseFloat(B.toFixed(1))
+
+                let texto = `Base Maior é = ${B}`
+                document.getElementById('resultado').innerHTML = texto
+
+            } else if (b == "") {
+
+                A = A * 2
+                B = B * h
+                A = A - B
+                b = A / h
+
+                b = parseFloat(b.toFixed(1))
+
+                let texto = `Base menor é = ${b}`
+                document.getElementById('resultado').innerHTML = texto
+
+            } else if (h == "") {
+
+                let B = parseInt(document.getElementById('B').value)
+                let b = parseInt(document.getElementById('b').value)
+
+                A = A * 2
+                B = B + b
+                h = A / B
+
+                h = parseFloat(h.toFixed(1))
+
+                let texto = `Altura é = ${h}`
+                document.getElementById('resultado').innerHTML = texto
+
+            } else if (A != null && B != null && b != null && h != null) {
+
+                let B = parseInt(document.getElementById('B').value)
+                let b = parseInt(document.getElementById('b').value)
+
+                B = B + b
+                B = B * h
+                B = B / 2
+
+                if (B == A) {
+
+                    let texto = `Valores Válidos`
+                    document.getElementById('resultado').innerHTML = texto
+
+                } else if (B != A) {
+
+                    let texto = `Valores Inválidos, por favor verifique-os`
+                    document.getElementById('resultado').innerHTML = texto
+
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

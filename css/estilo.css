@@ -1,14 +1,8 @@
-body {
-    text-align: justify;
-}
-
-.jumbotron {
-    background: url(../img/jumbotron.jpg) no-repeat;
+.jumbotron-linha {
+    background: url(../img/jumbotron.jpg);
+    height: 38.75rem;
     background-position: center;
-    background-size: cover;
-    margin: 0px;
-    padding-top: 16rem;
-    padding-bottom: 16rem;
+    -webkit-background-size: cover;
 }
 
 .navbar {
@@ -126,4 +120,8 @@ ul li :nth-child(1) {
 .projetos {
     background-color: rgb(110, 110, 110);
     padding-bottom: 8px;
+}
+
+.lista-projetos {
+    list-style: none;
 }

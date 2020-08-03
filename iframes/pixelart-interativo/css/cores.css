@@ -1,0 +1,26 @@
+body {
+    background: #333;
+}
+
+.grade {
+    width: 720px;
+    height: 720px;
+}
+
+.pixel {
+    border: white 1px solid;
+    width: 45px;
+    height: 45px;
+    float: left;
+}
+
+.paleta {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    border: 3px solid white;
+}
+
+.paleta-cores {
+    width: 144px;
+}

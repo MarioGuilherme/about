@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>PITÁGORAS</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <h2 id='h2'>
+        CALCULADORA DE PITÁGORAS
+    </h2>
+    <fieldset id='table2'>
+        <table class="table">
+            <tr>
+                <td>
+                    <label>
+                        Introduza o valor do Cateto A
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        <strong>
+                            <input id='valorXA' type="number">
+                        </strong>
+                    </label>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <button onclick="calcularA()">Calcular Cateto A</button>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    CATETO A =
+                </td>
+                <td></td>
+                <td>
+                    <p id="valorA"></p>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+        <br>
+        <table class="table">
+            <tr>
+                <td>
+                    <label>
+                        Introduza o valor do Cateto B
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input id="valorXB" type="number">
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <button onclick="calcularB()">Calcular Cateto B</button>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    CATETO B =
+                </td>
+                <td></td>
+                <td>
+                    <p id="valorB"></p>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+        <br>
+        <table class="table">
+            <tr>
+                <td>
+                    <label>
+                        Introduza o valor da Hipostenusa
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input id="hipoX" type="number">
+                </td>
+                <td></td>
+                <td></td>
+                <td>
+                    <button onclick="calcularHipo()">Calcular Hipotenusa</button>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    HIPOTENUSA =
+                </td>
+                <td></td>
+                <td>
+                    <p id="valorHipo"></p>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </fieldset>
+
+
+    <script>
+        function calcular() {
+
+            let valorXB = document.getElementById('valorXB').value
+            let hipoX = document.getElementById('hipoX').value
+
+            valorXB = Math.pow(valorXB, 2)
+            hipoX = Math.pow(hipoX, 2)
+            x = hipoX - valorXB
+            x = Math.sqrt(x)
+
+            x = parseFloat(x.toFixed(1))
+
+            let texto = `${x}`
+            document.getElementById("valorA").innerHTML = texto
+
+        }
+    </script>
+
+    <script>
+        function calcularB() {
+
+            let valorXA = document.getElementById('valorXA').value
+            let hipoX = document.getElementById('hipoX').value
+
+            valorXA = Math.pow(valorXA, 2)
+            hipoX = Math.pow(hipoX, 2)
+            x = hipoX - valorXA
+            x = Math.sqrt(x)
+
+            x = parseFloat(x.toFixed(1))
+
+            let texto = `${x}`
+            document.getElementById("valorB").innerHTML = texto
+
+        }
+    </script>
+
+    <script>
+        function calcularHipo() {
+
+            let valorXA = document.getElementById('valorXA').value
+            let valorXB = document.getElementById('valorXB').value
+
+            valorXA = Math.pow(valorXA, 2)
+            valorXB = Math.pow(valorXB, 2)
+            x = valorXA + valorXB
+            x = Math.sqrt(x)
+
+            x = parseFloat(x.toFixed(1))
+
+            let texto = `${x}`
+            document.getElementById("valorHipo").innerHTML = texto
+
+        }
+    </script>
+</body>
+
+</html>

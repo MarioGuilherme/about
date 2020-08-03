@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Equação do 1º Grau</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <center>
+        <h1 class='h'>
+            Calculadora de Equação do 1 º Grau
+        </h1>
+        <h3 class="h">
+            Calculos com quatros valores, sendo possivel encontrar um só valor, sendo ele (X)
+        </h3>
+        <table>
+            <tr>
+                <td>
+                    <center>
+                        Introduza o 1º valor
+                    </center>
+                </td>
+                <td></td>
+                <td>
+                    <center>
+                        Introduza o 2º valor
+                    </center>
+                </td>
+                <td></td>
+                <td>
+                    <center>
+                        Introduza o 3º valor
+                    </center>
+                </td>
+                <td></td>
+                <td>
+                    <center>
+                        Introduza o 4º valor
+                    </center>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <center>
+                        <input id="a" type="number">
+                    </center>
+                </td>
+                <td>
+                    <p id="multi">
+                        .
+                    </p>
+                </td>
+                <td>
+                    <center>
+                        <input id="b" type="number">
+                    </center>
+                </td>
+                <td id="multi">
+                    =
+                </td>
+                <td>
+                    <center>
+                        <input id="c" type="number">
+                    </center>
+                </td>
+                <td>
+                    <p id="multi">
+                        .
+                    </p>
+                </td>
+                <td>
+                    <center>
+                        <input id="d" type="number">
+                    </center>
+                </td>
+            </tr>
+        </table>
+        <br><br>
+        <button onclick="calcular()">
+            Calcular
+        </button>
+        <br><br>
+        <p>
+            <font face='arial'>
+                O resultado de X é:
+            </font>
+        </p>
+        <br>
+        <p id='resultado'></p>
+    </center>
+
+    <script>
+        function calcular() {
+            let a = document.getElementById('a').value
+            let b = document.getElementById('b').value
+            let c = document.getElementById('c').value
+            let d = document.getElementById('d').value
+
+            if (a == "") {
+                a = c * d
+                a = a / b
+
+                let texto = `${a}`
+                document.getElementById('resultado').innerHTML = texto
+            } else if (b == "") {
+                b = c * d
+                b = b / a
+
+                let texto = `${b}`
+                document.getElementById('resultado').innerHTML = texto
+            } else if (c == "") {
+                c = a * b
+                c = c / d
+
+                let texto = `${c}`
+                document.getElementById('resultado').innerHTML = texto
+            } else if (d == "") {
+                d = a * b
+                d = d / c
+
+                let texto = `${d}`
+                document.getElementById('resultado').innerHTML = texto
+            } else if (a != null && b != null && c != null && d != null) {
+
+                let texto = `Os valores já etão definidos`
+                document.getElementById('resultado').innerHTML = texto
+            }
+        }
+    </script>
+</body>
+
+</html>

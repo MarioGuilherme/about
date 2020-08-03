@@ -7,7 +7,7 @@
     <title>Mário Guilherme</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/estilo.css">
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
 </head>
 
 <body>
@@ -34,12 +34,13 @@
         </div>
     </nav>
 
-    <div class="jumbotron">
-        <h1 class="display-4 font-weight-bold text-light text-center">Mário Guilherme de Andrade Rodrigues</h1>
-        <h5 class="text-light text-center ">Técnico em Desenvolvimento de Sistemas</h5>
-    </div>
-
     <div class="container-fluid">
+        <div class="row jumbotron-linha">
+            <div class="col-12 align-self-center col-md-12 text-center">
+                <h1 class="display-4 font-weight-bold text-light">Mário Guilherme de Andrade Rodrigues</h1>
+                <h5 class="text-light">Técnico em Desenvolvimento de Sistemas</h5>
+            </div>
+        </div>
         <div class="row" id="sobre">
             <div class="col-12 col-md-6">
                 <h3 class="mt-5 text-light font-weight-bold text-center mb-2">
@@ -47,7 +48,7 @@
                 </h3>
             </div>
             <div class="col-12 col-md-6">
-                <p class="text-light">
+                <p class="text-light text-justify">
                     Estudante dos cursos Técnico em Agropecuária Integrado ao Ensino Médio e Técnico em Desenvolvimento de Sistemas na Instituição ETEC Professora Helcy Moreira Martins Aguiar, na cidade de Cafelândia, São Paulo. Sou de uma formação mais centrada ao BACK-END,
                     sendo mais apto ao Web Service, como criação de Banco de Dados com MySQL e tendo um gosto maior por lógica de programação como as linguagens PHP e JavaScript, e <strong>futuramente</strong> Python.
                 </p>
@@ -93,7 +94,7 @@
             <div class="col-md-12 col-12 justify-content-center">
                 <div class="row text-center mt-3 ml-3">
                     <div class="col-12 col-md-4">
-                        <img class="graficos" src="img/javascript-grafico.png" alt="">
+                        <img class="graficos" src="img/grafico-javascript.png" alt="">
                     </div>
                     <div class="col-12 col-md-4">
                         <img class="graficos" src="img/grafico-photoshop.png" alt="">
@@ -102,7 +103,7 @@
                         <img class="graficos" src="img/grafico-webdesigner.png" alt="">
                     </div>
                     <div class="col-12 col-md-4">
-                        <img class="graficos" src="img/html-css-grafico.png" alt="">
+                        <img class="graficos" src="img/grafico-html-css.png" alt="">
                     </div>
                     <div class="col-12 col-md-4">
                         <img class="graficos" src="img/grafico-apps.png" alt="">
@@ -113,16 +114,37 @@
                 </div>
             </div>
         </div>
-        <div class="row projetos">
+        <div id="projetos" class="row projetos">
             <div class="col-12 col-md-12">
                 <h1 class="mt-2 text-center font-weight-bold">
                     PROJETOS
                 </h1>
             </div>
-            <div class="row">
-                <div class="col-12 col-md-12">
-                    <iframe class="iframes" src="../AulaPW/Atividades/ATIVIDADE - 03.06.2020/index.html" frameborder="0"></iframe>
-                </div>
+            <div class="col-md-12 col-12 text-center">
+                <h2 class="text-light">
+                    CALCULADORA DE BHASKARA, 3 Dez 2019 - 31 Mar 2020
+                </h2>
+                <iframe src="iframes/bhaskara/index.html" width="85%" height="700px"></iframe>
+
+                <h2 class="text-light mt-5">
+                    CALCULADORA DE TRAPÉZIO, 4 Nov 2019
+                </h2>
+                <iframe src="iframes/trapezio/index.html" width="85%" height="800px"></iframe>
+
+                <h2 class="text-light mt-5">
+                    CALCULADORA DE PITÁGORAS, 3 Nov 2019
+                </h2>
+                <iframe src="iframes/pitagoras/index.html" width="85%" height="350px"></iframe>
+
+                <h2 class="text-light mt-5">
+                    PIXELART INTERATIVO, 19 Abr 2020
+                </h2>
+                <iframe src="iframes/pixelart-interativo/index.html" width="85%" height="750px"></iframe>
+
+                <h2 class="text-light mt-5">
+                    CALCULADORA DO 1º GRAU, 2 Nov 2019
+                </h2>
+                <iframe src="iframes/calculadora-1grau/index.html" width="85%" height="500px"></iframe>
             </div>
         </div>
     </div>
@@ -170,10 +192,10 @@
         </div>
     </div>
 
-    <!-------------------------------------------------------JANELA MODAIS------------------------------------>
+    </div>
 
     <!--------------------------------------------------------RODAPÉ---------------->
-    <div class="card rodape text-center mt-3">
+    <div class="card rodape text-center">
         <div class="card-body">
             <h5 class="card-title text-light">Desenvolvido por Mário Guilherme de Andrade Rodrigues</h5>
             <p class="card-text text-light">Cafelândia - SP, Brasil</p>
