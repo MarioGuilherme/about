@@ -25,15 +25,12 @@ h1 {
 }
 
 #ex {
-    float: right;
     border-color: black;
     border: 5px solid;
-    padding-right: 20px;
-    padding-left: 20px;
-    padding-bottom: 10px;
-    margin-top: 10px;
-    margin-bottom: 44px;
-    margin-right: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 655px;
+    height: 500px;
 }
 
 #img {
@@ -47,12 +44,10 @@ h1 {
 
 #calc {
     float: left;
-    margin-left: 50px;
     border: 5px solid black;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 50px;
-    width: 480px;
+    width: 440px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 #dividendo1 {

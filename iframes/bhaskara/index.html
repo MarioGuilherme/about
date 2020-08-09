@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -12,47 +12,79 @@
 
 <body>
     <div class="container">
-        <div class="row">
-            <div class="col-12 bg-dark">
-                <h1 class="text-light display-4 text-center">CALCULADORA DE BHASKARA</h1>
+
+        <div class="row mb-2">
+            <div class="col-12 col-md-12 bg-dark">
+                <h1 class="text-light text-center">CALCULADORA DE BHASKARA</h1>
             </div>
         </div>
-        <div class="row mt-5 justify-content-center">
-            <div id="calc" class="col-md-6 col-6 text-center">
-                <strong>
-                    <h1 id="h1" class="text-center">
-                        <u>CALCULADORA</u>
-                    </h1>
-                </strong>
-                <div class="operacoes">
-                    <p class="mt-3" id="conta"><input placeholder='∆' id="delta" type="number"> =
-                        <input placeholder='b' id="b" type="number">² - 4.<input placeholder='a' id="a" type="number">.<input placeholder='c' id="c" type="number">
-                    </p>
+
+        <div class="row">
+            <div class="col-md-5 col-12 text-center">
+
+                <h2>
+                    CÁCULO
+                </h2>
+
+                <div class="area-calculo">
+                    <select class="form-control" name="">
+                        <option value="">SELECIONE A INCÓGNITA A SER ENCONTRADA</option>
+                        <option value="full">Valor de ∆, x1 e x2</option>
+                        <option value="xis">Apenas x1 e x2</option>
+                    </select>
+
+                    <div class="row mt-3">
+                        <div class="col-12 col-md-12 justify-content-center d-flex">
+                            <div class="formula">
+                                <p>
+                                    <input placeholder='∆' id="delta" type="number"> =
+                                    <input placeholder='b' id="b" type="number">² - 4.<input placeholder='a' id="a" type="number">.<input placeholder='c' id="c" type="number">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-12 col-md-12 justify-content-center d-flex">
+                            <div class="formula">
+                                <table>
+                                    <tr>
+                                        <td rowspan="2">x</td>
+                                        <td rowspan="2">=</td>
+                                        <td><input placeholder='-b' type="number"> ± √ <input placeholder='∆' type="number"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="divisor">2.<input placeholder='a' type="number"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-12 col-md-12">
+                            <button onclick="calcular()" class="btn btn-outline-success btn-lg">
+                                CALCULAR
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3 mb-3">
+                        <div class="col-12 col-md-12">
+                            <p>
+                                .
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <br>
-                <button onclick="calcular()" id="botao" class="btn btn-outline-success btn-lg">CALCULAR</button><br>
-                <br> OU
-                <br>
-                <br>
-                <div class="operacoes">
-                    <center>
-                        <table class="mt-3 mb-3" id="conta">
-                            <tr>
-                                <td rowspan="2">x</td>
-                                <td rowspan="2">=</td>
-                                <td><input placeholder='-b' id="bn" type="number"> ± √<input placeholder='∆' id="delta2" type="number"></td>
-                            </tr>
-                            <tr>
-                                <td class="text-center" id="divisor">2.<input placeholder='a' id="a2" type="number"></td>
-                            </tr>
-                        </table>
-                    </center>
+            </div>
+
+            <div class="col-md-7 col-12">
+                <h2>
+                    RESULTADO PASSO A PASSO
+                </h2>
+                <div class="area-resultado">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi illo sapiente fuga saepe eius porro, odio fugit ea. Nisi rem aperiam accusantium minus dolorum possimus expedita, facilis ipsa dolorem eos.
                 </div>
-                <br>
-                <button onclick="calcular2()" id="botao" class="btn btn-outline-success btn-lg">CALCULAR</button>
-                <br><br>
-                <p id="resultado">.</p>
-                <br>
             </div>
         </div>
     </div>
