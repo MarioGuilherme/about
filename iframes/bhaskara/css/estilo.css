@@ -1,25 +1,24 @@
 .area-resultado {
     border: black solid 3px;
+    height: 23.125rem;
 }
 
 h2 {
     text-decoration: underline;
+    text-align: center;
 }
 
 .area-calculo {
     border: black solid 3px;
-    height: auto;
-    padding: 10px;
+    height: 23.125rem;
+    padding-left: 15px;
+    padding-right: 10px;
 }
 
 p {
     margin: 0px;
     font-size: 25px;
     font-weight: bold;
-}
-
-.grid {
-    padding: 2px;
 }
 
 .divisor {
@@ -50,11 +49,27 @@ input:focus {
     height: 100%;
 }
 
-.rodape {
-    background-color: #1a1a1a;
-    padding: 5px;
+@media (max-width:775px) {
+    .resultado {
+        margin-top: 1rem;
+    }
 }
 
-.botao {
-    align-content: flex-end;
+.emoji {
+    text-align: center;
+    font-size: 23px;
+}
+
+#local-resultado {
+    opacity: 0;
+}
+
+h5 {
+    text-align: justify;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.invisivel {
+    display: none;
 }

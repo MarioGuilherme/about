@@ -20,167 +20,199 @@
         </div>
 
         <div class="row">
-            <div class="col-md-5 col-12 text-center">
-
+            <div class="col-12 col-md-4">
                 <h2>
                     CÁCULO
                 </h2>
-
-                <div class="area-calculo">
-                    <select class="form-control" name="">
-                        <option value="">SELECIONE A INCÓGNITA A SER ENCONTRADA</option>
-                        <option value="full">Valor de ∆, x1 e x2</option>
-                        <option value="xis">Apenas x1 e x2</option>
-                    </select>
-
-                    <div class="row mt-3">
-                        <div class="col-12 col-md-12 justify-content-center d-flex">
-                            <div class="formula">
-                                <p>
-                                    <input placeholder='∆' id="delta" type="number"> =
-                                    <input placeholder='b' id="b" type="number">² - 4.<input placeholder='a' id="a" type="number">.<input placeholder='c' id="c" type="number">
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mt-3">
-                        <div class="col-12 col-md-12 justify-content-center d-flex">
-                            <div class="formula">
-                                <table>
-                                    <tr>
-                                        <td rowspan="2">x</td>
-                                        <td rowspan="2">=</td>
-                                        <td><input placeholder='-b' type="number"> ± √ <input placeholder='∆' type="number"></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="divisor">2.<input placeholder='a' type="number"></td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row mt-3">
-                        <div class="col-12 col-md-12">
-                            <button onclick="calcular()" class="btn btn-outline-success btn-lg">
-                                CALCULAR
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="row mt-3 mb-3">
-                        <div class="col-12 col-md-12">
-                            <p>
-                                .
-                            </p>
-                        </div>
-                    </div>
-                </div>
             </div>
-
-            <div class="col-md-7 col-12">
+            <div class="col-12 col-md-8">
                 <h2>
                     RESULTADO PASSO A PASSO
                 </h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-md-4 area-calculo d-flex text-center align-items-center justify-content-center">
+                <div class="row">
+                    <div class="col-md-12 col-12">
+                        <select onchange="selecionar()" class="form-control" id="select">
+                            <option value="">INCÓGNITA A SER ENCONTRADA</option>
+                            <option value="delta">Valor de ∆</option>
+                            <option value="xis">Valor de x1 e x2</option>
+                            <option value="delta-xis">Valores de ∆, x1 e x2</option>
+                        </select>
+                        <div id="ajuda" class="mt-3">
+                            <h5>
+                                Selecione acima a incógnita desejada e insira os valores na fórmula a seguir
+                                <p class="emoji">;)</p>
+                            </h5>
+                        </div>
+                        <div id="formula-delta" class="mt-3 invisivel">
+                            <div class="col-12 col-md-12 justify-content-center d-flex">
+                                <div class="formula">
+                                    <input placeholder='∆' id="delta" type="number">=<input placeholder='b' id="b" type="number">²-4.<input placeholder='a' id="a" type="number">.<input placeholder='c' id="c" type="number">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="formula-xis" class="mt-3 invisivel">
+                            <div class="justify-content-center d-flex">
+                                <div class="formula text-center">
+                                    <table>
+                                        <tr>
+                                            <td rowspan="2">x</td>
+                                            <td rowspan="2">=</td>
+                                            <td><input placeholder='-b' type="number"> ± √ <input placeholder='∆' type="number"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="divisor">2.<input placeholder='a' type="number"></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-12 col-12 mt-3">
+                        <button onclick="calcular()" class="btn btn-outline-success btn-lg">
+                            CALCULAR
+                        </button>
+                    </div>
+                    <div class="col-md-12 col-12 mt-3 mb-3">
+                        <p id="local-resultado fim">
+                            Testando ele
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-8 col-12 resultado">
                 <div class="area-resultado">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi illo sapiente fuga saepe eius porro, odio fugit ea. Nisi rem aperiam accusantium minus dolorum possimus expedita, facilis ipsa dolorem eos.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum cum soluta commodi maiores dolore ipsa. Ipsam iusto atque ipsa incidunt sapiente totam ut velit eos autem dolorem? Consequatur, facilis ea!Lorem ipsum dolor sit, amet consectetur adipisicing
+                    elit. Eum cum soluta commodi maiores dolore ipsa. Ipsam iusto atque ipsa incidunt sapiente totam ut velit eos autem dolorem? Consequatur, facilis ea!
                 </div>
             </div>
         </div>
-    </div>
 
-    <script>
-        function calcular() {
-            let a = document.getElementById('a').value
-            let b = document.getElementById('b').value
-            let c = document.getElementById('c').value
-            let delta = document.getElementById('delta').value
+        <script>
+            function selecionar() {
+                let select = document.getElementById("select").value
+                let formula_delta = document.getElementById("formula-delta");
+                let formula_xis = document.getElementById("formula-xis");
+                let ajuda = document.getElementById("ajuda");
 
-            if (a == "" && b == "" && c == "" && delta == "") {
-
-                let texto = `Por favor defina no minimo três valores afim de achar a incógnita`
-                document.getElementById('resultado').innerHTML = texto
-
-            } else if (delta == "") {
-
-                b = Math.pow(b, 2)
-                a = 4 * a * c
-                delta = b - a
-
-                let texto = `O valor de ∆ é igual á ${delta}`
-                document.getElementById('resultado').innerHTML = texto
-
-            } else if (b == "") {
-
-                let delta = parseInt(document.getElementById('delta').value)
-
-                pt = 4 * a * c
-                delta = delta + pt
-                b = Math.sqrt(delta, 2)
-
-                let texto = `O valor de b é igual á ${b}`
-                document.getElementById('resultado').innerHTML = texto
-
-            } else if (a == "") {
-
-                let delta = parseInt(document.getElementById('delta').value)
-                let b = parseInt(document.getElementById('b').value)
-
-                b = Math.pow(b, 2)
-                c = 4 * c
-                delta = delta - b
-                a = delta / c
-
-                let texto = `O valor de A é igual á ${a}`
-                document.getElementById('resultado').innerHTML = texto
-            } else if (c == "") {
-
-                b = Math.pow(b, 2)
-                a = a * 4
-                delta = delta - b
-                c = a / delta
-
-                let texto = `O valor de C é igual á ${c}`
-                document.getElementById('resultado').innerHTML = texto
-            }
-        }
-    </script>
-    <script>
-        function calcular2() {
-            let bn = parseInt(document.getElementById("bn").value)
-            let delta2 = parseInt(document.getElementById("delta2").value)
-            let a2 = document.getElementById("a2").value
-
-            if (bn > 0) {
-                bn = -1 * bn
-            } else if (bn < 0) {
-                bn = -1 * bn
+                if (select == "") {
+                    ajuda.style.display = "block"
+                    formula_delta.style.display = "none"
+                    formula_xis.style.display = "none"
+                } else if (select == 'delta') {
+                    formula_delta.style.display = "block"
+                    formula_xis.style.display = "none"
+                    ajuda.style.display = "none"
+                } else if (select == 'xis') {
+                    formula_delta.style.display = "none"
+                    formula_xis.style.display = "block"
+                    ajuda.style.display = "none"
+                } else if (select == "delta-xis") {
+                    formula_delta.style.display = "block"
+                    formula_xis.style.display = "block"
+                    ajuda.style.display = "none"
+                }
             }
 
-            if (bn != "" && delta2 != "" && a2 == "") {
+            function calcular() {
 
-                let texto = `Por favor defina no os três valores afim de achar x1 e x2`
-                document.getElementById('resultado').innerHTML = texto
+                let a = document.getElementById('a').value
+                let b = document.getElementById('b').value
+                let c = document.getElementById('c').value
+                let delta = document.getElementById('delta').value
 
-            } else if (delta2 < 0) {
+                if (a == "" && b == "" && c == "" && delta == "") {
 
-                let texto = `Valor da Raíz não Real`
-                document.getElementById('resultado').innerHTML = texto
+                    let texto = `Por favor defina no minimo três valores afim de achar a incógnita`
+                    document.getElementById('resultado').innerHTML = texto
 
-            } else if (bn != "" && delta2 != "" && a2 != "") {
+                } else if (delta == "") {
 
-                a2 = 2 * a2
-                delta2 = Math.sqrt(delta2, 2)
-                x1 = (bn + delta2) / a2
-                x2 = (bn - delta2) / a2
+                    b = Math.pow(b, 2)
+                    a = 4 * a * c
+                    delta = b - a
 
-                let texto = `x' = ${x1} e x" = ${x2}`
-                document.getElementById('resultado').innerHTML = texto
+                    let texto = `O valor de ∆ é igual á ${delta}`
+                    document.getElementById('resultado').innerHTML = texto
+
+                } else if (b == "") {
+
+                    let delta = parseInt(document.getElementById('delta').value)
+
+                    pt = 4 * a * c
+                    delta = delta + pt
+                    b = Math.sqrt(delta, 2)
+
+                    let texto = `O valor de b é igual á ${b}`
+                    document.getElementById('resultado').innerHTML = texto
+
+                } else if (a == "") {
+
+                    let delta = parseInt(document.getElementById('delta').value)
+                    let b = parseInt(document.getElementById('b').value)
+
+                    b = Math.pow(b, 2)
+                    c = 4 * c
+                    delta = delta - b
+                    a = delta / c
+
+                    let texto = `O valor de A é igual á ${a}`
+                    document.getElementById('resultado').innerHTML = texto
+                } else if (c == "") {
+
+                    b = Math.pow(b, 2)
+                    a = a * 4
+                    delta = delta - b
+                    c = a / delta
+
+                    let texto = `O valor de C é igual á ${c}`
+                    document.getElementById('resultado').innerHTML = texto
+                }
             }
-        }
-    </script>
-    <script src="modelo/js/bootstrap.js"></script>
-    <script src="modelo/js/jquery-3.4.1.js"></script>
+        </script>
+        <script>
+            function calcular2() {
+                let bn = parseInt(document.getElementById("bn").value)
+                let delta2 = parseInt(document.getElementById("delta2").value)
+                let a2 = document.getElementById("a2").value
+
+                if (bn > 0) {
+                    bn = -1 * bn
+                } else if (bn < 0) {
+                    bn = -1 * bn
+                }
+
+                if (bn != "" && delta2 != "" && a2 == "") {
+
+                    let texto = `Por favor defina no os três valores afim de achar x1 e x2`
+                    document.getElementById('resultado').innerHTML = texto
+
+                } else if (delta2 < 0) {
+
+                    let texto = `Valor da Raíz não Real`
+                    document.getElementById('resultado').innerHTML = texto
+
+                } else if (bn != "" && delta2 != "" && a2 != "") {
+
+                    a2 = 2 * a2
+                    delta2 = Math.sqrt(delta2, 2)
+                    x1 = (bn + delta2) / a2
+                    x2 = (bn - delta2) / a2
+
+                    let texto = `x' = ${x1} e x" = ${x2}`
+                    document.getElementById('resultado').innerHTML = texto
+                }
+            }
+        </script>
+        <script src="modelo/js/bootstrap.js"></script>
+        <script src="modelo/js/jquery-3.4.1.js"></script>
 </body>
 
 </html>
