@@ -1,6 +1,5 @@
 .area-resultado {
     border: black solid 3px;
-    height: 23.125rem;
 }
 
 h2 {
@@ -60,10 +59,6 @@ input:focus {
     font-size: 23px;
 }
 
-#local-resultado {
-    opacity: 0;
-}
-
 h5 {
     text-align: justify;
     padding-left: 15px;
@@ -72,4 +67,43 @@ h5 {
 
 .invisivel {
     display: none;
+}
+
+#botao {
+    display: none;
+}
+
+.formula-xis {
+    padding: 10px;
+    border: 1px solid #dee2e6;
+    width: 92%;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0.7);
+    font-size: 25px;
+    height: calc(100% - 23%);
+    font-weight: bold;
+    margin-right: 3%;
+    margin-left: 3%;
+}
+
+.seta {
+    font-size: 29px;
+}
+
+.resposta-formulacao {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.linhas {
+    font-size: 18px !important;
+    font-weight: bold !important;
+}
+
+#fracao-x1,
+#fracao-x2 {
+    border-top: 1px black solid;
+}
+
+#caixas {
+    margin-top: 2.75rem;
 }

@@ -22,7 +22,7 @@
         <div class="row">
             <div class="col-12 col-md-4">
                 <h2>
-                    CÁCULO
+                    CÁLCULO
                 </h2>
             </div>
             <div class="col-12 col-md-8">
@@ -38,8 +38,9 @@
                     <div class="col-md-12 col-12">
                         <select onchange="selecionar()" class="form-control" id="select">
                             <option value="">INCÓGNITA A SER ENCONTRADA</option>
-                            <option value="delta">Valor de ∆</option>
-                            <option value="xis">Valor de x1 e x2</option>
+                            <option value="valor-a">Valor de a</option>
+                            <option value="valor-b">Valor de b</option>
+                            <option value="valor-c">Valor de c</option>
                             <option value="delta-xis">Valores de ∆, x1 e x2</option>
                         </select>
                         <div id="ajuda" class="mt-3">
@@ -48,24 +49,50 @@
                                 <p class="emoji">;)</p>
                             </h5>
                         </div>
-                        <div id="formula-delta" class="mt-3 invisivel">
+                        <div id="formula-a" class="mt-3 invisivel">
                             <div class="col-12 col-md-12 justify-content-center d-flex">
                                 <div class="formula">
-                                    <input placeholder='∆' id="delta" type="number">=<input placeholder='b' id="b" type="number">²-4.<input placeholder='a' id="a" type="number">.<input placeholder='c' id="c" type="number">
+                                    <input placeholder='∆' id="delta" type="number">=<input placeholder='b' id="b" type="number">²-4.a.<input placeholder='c' id="c" type="number">
                                 </div>
                             </div>
                         </div>
-                        <div id="formula-xis" class="mt-3 invisivel">
+                        <div id="formula-b" class="mt-3 invisivel">
+                            <div class="col-12 col-md-12 justify-content-center d-flex">
+                                <div class="formula">
+                                    <input placeholder='∆' id="delta2" type="number">=b²-4.<input placeholder='a' id="a2" type="number">.<input placeholder='c' id="c2" type="number">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="formula-c" class="mt-3 invisivel">
+                            <div class="col-12 col-md-12 justify-content-center d-flex">
+                                <div class="formula">
+                                    <input placeholder='∆' id="delta3" type="number">=<input placeholder='b' id="b3" type="number">²-4.<input placeholder='a' id="a3" type="number">.c
+                                </div>
+                            </div>
+                        </div>
+                        <div id="formula-xis" class="mt-3 invisivel formula-xis">
+                            <div class="col-12 col-md-12 justify-content-center d-flex">
+                                <div>
+                                    ∆=<input placeholder='b' id="b4" type="number">²-4.<input placeholder='a' id="a4" type="number">.<input placeholder='c' id="c4" type="number">
+                                </div>
+                            </div>
+                            <div class="justify-content-center seta font-weight-bold d-flex">
+                                ↓
+                            </div>
                             <div class="justify-content-center d-flex">
-                                <div class="formula text-center">
+                                <div class="text-center">
                                     <table>
                                         <tr>
                                             <td rowspan="2">x</td>
                                             <td rowspan="2">=</td>
-                                            <td><input placeholder='-b' type="number"> ± √ <input placeholder='∆' type="number"></td>
+                                            <td>
+                                                <p>
+                                                    -b ± √ ∆
+                                                </p>
+                                            </td>
                                         </tr>
                                         <tr>
-                                            <td class="divisor">2.<input placeholder='a' type="number"></td>
+                                            <td class="divisor">2.a</td>
                                         </tr>
                                     </table>
                                 </div>
@@ -73,146 +100,464 @@
                         </div>
                     </div>
 
-
-                    <div class="col-md-12 col-12 mt-3">
+                    <div class="col-md-12 col-12 mt-3" id="botao">
                         <button onclick="calcular()" class="btn btn-outline-success btn-lg">
-                            CALCULAR
+                            Calcular
                         </button>
-                    </div>
-                    <div class="col-md-12 col-12 mt-3 mb-3">
-                        <p id="local-resultado fim">
-                            Testando ele
-                        </p>
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-8 col-12 resultado">
-                <div class="area-resultado">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum cum soluta commodi maiores dolore ipsa. Ipsam iusto atque ipsa incidunt sapiente totam ut velit eos autem dolorem? Consequatur, facilis ea!Lorem ipsum dolor sit, amet consectetur adipisicing
-                    elit. Eum cum soluta commodi maiores dolore ipsa. Ipsam iusto atque ipsa incidunt sapiente totam ut velit eos autem dolorem? Consequatur, facilis ea!
+            <div class="col-md-8 col-12 area-resultado">
+                <div id="resposta-xis" style="display: none;">
+                    <div class="row">
+                        <div class="col-md-6 col-6 text-left pl-3">
+                            <div class="col-12 col-md-12 resultado-passos-xis">
+                                <p>
+                                    ∆ = b² - 4.a.c
+                                </p>
+                                <p id="secao-resultado-1">
+                                    ∆ = b² - 4.a.c
+                                </p>
+                                <p id="secao-resultado-2">
+                                    ∆ = b² - 4ac
+                                </p>
+                                <p id="secao-resultado-3">
+                                    ∆ = ∆
+                                </p>
+                                <div class="justify-content-left d-flex resposta-formulacao">
+                                    <div class="text-center">
+                                        <table>
+                                            <tr>
+                                                <td rowspan="2">x=</td>
+                                                <td>
+                                                    <p id="secao-resultado-4">
+                                                        -b ± √ ∆
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="divisor" id="secao-resultado-5">2.a</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="justify-content-left d-flex resposta-formulacao">
+                                    <div class="text-center">
+                                        <table>
+                                            <tr>
+                                                <td rowspan="2">x=</td>
+                                                <td>
+                                                    <p id="secao-resultado-6">
+                                                        -b ± ∆
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="divisor" id="secao-resultado-7">2a</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="justify-content-left d-flex resposta-formulacao">
+                                    <div class="text-center linhas">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <table class="mr-2">
+                                                        <tr>
+                                                            <td rowspan="2">x1=</td>
+                                                            <td>
+                                                                <p id="secao-resultado-8" class="linhas">
+                                                                    -b + ∆
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="divisor" id="secao-resultado-9">2a</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td>
+                                                    <table>
+                                                        <tr>
+                                                            <td rowspan="2">x1=</td>
+                                                            <td>
+                                                                <p id="secao-resultado-10" class="linhas">
+                                                                    -b + ∆
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="divisor" id="secao-resultado-11">2a</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                                    </div>
+                                </div>
+                                <div class="justify-content-left d-flex resposta-formulacao">
+                                    <div class="text-center linhas">
+
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <table class="mr-2">
+                                                        <tr>
+                                                            <td rowspan="2">x2=</td>
+                                                            <td>
+                                                                <p id="secao-resultado-12" class="linhas">
+                                                                    -b - ∆
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="divisor" id="secao-resultado-13">2a</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td>
+                                                    <table>
+                                                        <tr>
+                                                            <td rowspan="2">x2=</td>
+                                                            <td>
+                                                                <p id="secao-resultado-14" class="linhas">
+                                                                    -b - ∆
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="divisor" id="secao-resultado-15">2a</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-6 d-flex justify-content-left">
+                            <div class="row">
+                                <div class="col-12 col-md-12 text-left">
+                                    <h4>
+                                        RESULTADOS
+                                    </h4>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <p id="resultado-a">
+                                                    a =
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p id="resultado-b">
+                                                    b =
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p id="resultado-c">
+                                                    c =
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p id="resultado-delta">
+                                                    ∆ =
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p id="resultado-delta-raiz">
+                                                    √∆ =
+                                                </p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table class="text-center" id="caixas">
+                                        <tr>
+                                            <td rowspan="2">
+                                                <p>x1 =</p>
+                                            </td>
+                                            <td>
+                                                <p id="x10">
+                                                    &nbsp;
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td id="fracao-x1" class="invisivel text-center">
+                                                <p id="x11">
+                                                    &nbsp;
+                                                </p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table id="caixas">
+                                        <tr>
+                                            <td rowspan="2">
+                                                <p>x2 =</p>
+                                            </td>
+                                            <td>
+                                                <p id="x20">
+                                                    &nbsp;
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td id="fracao-x2" class="invisivel text-center">
+                                                <p id="x21">
+                                                    &nbsp;
+                                                </p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
+    </div>
+    </div>
+    <script>
+        function calcular() {
 
-        <script>
-            function selecionar() {
-                let select = document.getElementById("select").value
-                let formula_delta = document.getElementById("formula-delta");
-                let formula_xis = document.getElementById("formula-xis");
-                let ajuda = document.getElementById("ajuda");
+            let select = document.getElementById("select").value
+            let b = document.getElementById("b").value
+            let c = document.getElementById("c").value
+            let delta = document.getElementById("delta").value
+            let a2 = document.getElementById("a2").value
+            let c2 = document.getElementById("c2").value
+            let delta2 = document.getElementById("delta2").value
+            let a3 = document.getElementById("a3").value
+            let b3 = document.getElementById("b3").value
+            let delta3 = document.getElementById("delta3").value
+            let a4 = document.getElementById("a4").value
+            let b4 = document.getElementById("b4").value
+            let c4 = document.getElementById("c4").value
+            let caixas = document.getElementById("caixas");
+            let fracao_x1 = document.getElementById("fracao-x1");
+            let fracao_x2 = document.getElementById("fracao-x2");
 
-                if (select == "") {
-                    ajuda.style.display = "block"
-                    formula_delta.style.display = "none"
-                    formula_xis.style.display = "none"
-                } else if (select == 'delta') {
-                    formula_delta.style.display = "block"
-                    formula_xis.style.display = "none"
-                    ajuda.style.display = "none"
-                } else if (select == 'xis') {
-                    formula_delta.style.display = "none"
-                    formula_xis.style.display = "block"
-                    ajuda.style.display = "none"
-                } else if (select == "delta-xis") {
-                    formula_delta.style.display = "block"
-                    formula_xis.style.display = "block"
-                    ajuda.style.display = "none"
-                }
-            }
+            if (select == "valor-a") {
+                if (delta == "" || b == "" || c == "") {
 
-            function calcular() {
+                    document.getElementById('b').style.border = "red 2px solid";
+                    document.getElementById('c').style.border = "red 2px solid";
+                    document.getElementById('delta').style.border = "red 2px solid";
+                    let resultado = `Impossível calcular, por favor insira os três valores requisitados`
+                    document.getElementById("resultado").innerHTML = resultado
 
-                let a = document.getElementById('a').value
-                let b = document.getElementById('b').value
-                let c = document.getElementById('c').value
-                let delta = document.getElementById('delta').value
-
-                if (a == "" && b == "" && c == "" && delta == "") {
-
-                    let texto = `Por favor defina no minimo três valores afim de achar a incógnita`
-                    document.getElementById('resultado').innerHTML = texto
-
-                } else if (delta == "") {
+                } else {
 
                     b = Math.pow(b, 2)
-                    a = 4 * a * c
-                    delta = b - a
+                    c = -4 * c
 
-                    let texto = `O valor de ∆ é igual á ${delta}`
-                    document.getElementById('resultado').innerHTML = texto
+                    if (b < 0) {
+                        b = -1 * b
+                    }
 
-                } else if (b == "") {
+                    b = delta - b
+                    a = b / c
+                    let resultado = `Valor de a = ${a}`
+                    document.getElementById("resultado").innerHTML = resultado
+                    document.getElementById('b').style.border = "green 2px solid";
+                    document.getElementById('c').style.border = "green 2px solid";
+                    document.getElementById('delta').style.border = "green 2px solid";
+                }
+            } else if (select == "valor-b") {
+                if (delta2 == "" || a2 == "" || c2 == "") {
 
-                    let delta = parseInt(document.getElementById('delta').value)
+                    document.getElementById('a2').style.border = "red 2px solid";
+                    document.getElementById('c2').style.border = "red 2px solid";
+                    document.getElementById('delta2').style.border = "red 2px solid";
 
-                    pt = 4 * a * c
-                    delta = delta + pt
-                    b = Math.sqrt(delta, 2)
+                    let resultado = `Impossível calcular, por favor insira os três valores requisitados`
+                    document.getElementById("resultado").innerHTML = resultado
 
-                    let texto = `O valor de b é igual á ${b}`
-                    document.getElementById('resultado').innerHTML = texto
+                } else {
+                    c2 = a2 * c2 * -4
 
-                } else if (a == "") {
+                    if (c2 > 0) {
+                        c2 = -1 * bn
+                    } else if (c2 < 0) {
+                        c2 = -1 * c2
+                    }
+                    b2 = delta2 + c2
+                    b2 = Math.sqrt(parseInt(b2), 2)
 
-                    let delta = parseInt(document.getElementById('delta').value)
-                    let b = parseInt(document.getElementById('b').value)
+                    let resultado = `Valor de b = ${b2}`
+                    document.getElementById("resultado").innerHTML = resultado
+                    document.getElementById('a2').style.border = "green 2px solid";
+                    document.getElementById('c2').style.border = "green 2px solid";
+                    document.getElementById('delta2').style.border = "green 2px solid";
+                }
 
-                    b = Math.pow(b, 2)
-                    c = 4 * c
-                    delta = delta - b
-                    a = delta / c
+            } else if (select == "valor-c") {
+                if (delta3 == "" || a3 == "" || b3 == "") {
 
-                    let texto = `O valor de A é igual á ${a}`
-                    document.getElementById('resultado').innerHTML = texto
-                } else if (c == "") {
+                    document.getElementById('a3').style.border = "red 2px solid";
+                    document.getElementById('b3').style.border = "red 2px solid";
+                    document.getElementById('delta3').style.border = "red 2px solid";
+                    let resultado = `Impossível calcular, por favor insira os três valores requisitados`
+                    document.getElementById("resultado").innerHTML = resultado
 
-                    b = Math.pow(b, 2)
-                    a = a * 4
-                    delta = delta - b
-                    c = a / delta
+                } else {
+                    b3 = Math.pow(b3, 2)
+                    a3 = -4 * a3
 
-                    let texto = `O valor de C é igual á ${c}`
-                    document.getElementById('resultado').innerHTML = texto
+                    if (b3 < 0) {
+                        b3 = -1 * b3
+                    }
+
+                    b3 = delta3 - b3
+                    c3 = b3 / a3
+
+                    let resultado = `Valor de b = ${c3}`
+                    document.getElementById("resultado").innerHTML = resultado
+                    document.getElementById('a3').style.border = "green 2px solid";
+                    document.getElementById('b3').style.border = "green 2px solid";
+                    document.getElementById('delta3').style.border = "green 2px solid";
+                }
+
+            } else if (select == "delta-xis") {
+                if (a4 == "" || b4 == "" || c4 == "") {
+
+                    document.getElementById('a4').style.border = "red 2px solid";
+                    document.getElementById('b4').style.border = "red 2px solid";
+                    document.getElementById('c4').style.border = "red 2px solid";
+                    let resultado = `Impossível calcular, por favor insira os três valores requisitados`
+                    document.getElementById("resultado").innerHTML = resultado
+
+                } else {
+
+                    delta = (Math.pow(b4, 2) - (4 * a4 * c4))
+
+                    if (delta < 0) {
+                        alert("Não Possui Raízes Reais") /* FINALIZAÇÃO DO CÓDIGO, SE SIM*/
+                    } else {
+
+                        raiz_delta = Math.sqrt(delta, 2)
+
+                        if (raiz_delta % 1 != 0 && !isNaN(raiz_delta % 1)) {
+                            alert("AVISO: Raíz Inexata")
+                        }
+
+                        b4n = b4
+
+                        if (b4 > 0) {
+                            b4 = -1 * b4
+                        } else if (b4 < 0) {
+                            b4 = -1 * b4
+                        }
+
+                        x10 = b4 + raiz_delta
+                        x11 = 2 * a4
+
+                        x1final = x10 / x11
+
+                        x20 = b4 - raiz_delta
+                        x21 = 2 * a4
+
+                        x2final = x20 / x21
+
+                        if (x1final % 1 != 0 && !isNaN(x1final % 1)) {
+
+                            let resultado = `${x10}`
+                            document.getElementById("x10").innerHTML = resultado
+                            let resultado2 = `${x11}`
+                            document.getElementById("x11").innerHTML = resultado2
+                            fracao_x1.classList.remove("invisivel");
+
+                        } else {
+                            let resultado = `${x1final}`
+                            document.getElementById("x10").innerHTML = resultado
+                            let resultado2 = ``
+                            document.getElementById("x11").innerHTML = resultado2
+                            fracao_x1.classList.add("invisivel");
+                            caixas.classList.add("mt-3");
+                        }
+                        if (x2final % 1 != 0 && !isNaN(x2final % 1)) {
+
+                            let resultado = `${x20}`
+                            document.getElementById("x20").innerHTML = resultado
+                            let resultado2 = `${x21}`
+                            document.getElementById("x21").innerHTML = resultado2
+                            fracao_x2.classList.remove("invisivel");
+                            caixas.classList.remove("mt-5");
+                            caixas.classList.add("mt-3");
+
+                        } else {
+                            let resultado = `${x2final}`
+                            document.getElementById("x20").innerHTML = resultado
+                            let resultado2 = ``
+                            document.getElementById("x21").innerHTML = resultado2
+                            fracao_x2.classList.add("invisivel");
+                            caixas.classList.add("mt-3");
+
+                        }
+                        document.getElementById('a4').style.border = "green 2px solid";
+                        document.getElementById('b4').style.border = "green 2px solid";
+                        document.getElementById('c4').style.border = "green 2px solid";
+                        alteracao16 = `a = ${a4}`
+                        document.getElementById("resultado-a").innerHTML = alteracao16
+                        alteracao17 = `b = ${b4}`
+                        document.getElementById("resultado-b").innerHTML = alteracao17
+                        alteracao18 = `c = ${c4}`
+                        document.getElementById("resultado-c").innerHTML = alteracao18
+                        alteracao19 = `∆ = ${delta}`
+                        document.getElementById("resultado-delta").innerHTML = alteracao19
+                        alteracao20 = `√∆ = ${raiz_delta}`
+                        document.getElementById("resultado-delta-raiz").innerHTML = alteracao20
+                        alteracao1 = `∆ = ${b4n}² - 4.${a4}.${c4}`
+                        document.getElementById("secao-resultado-1").innerHTML = alteracao1
+                        alteracao2 = `∆ = ${b4n * b4} - ${a4 * c4 * 4}`
+                        document.getElementById("secao-resultado-2").innerHTML = alteracao2
+                        alteracao3 = `∆ = ${(b4n * b4n) - a4 * c4 * 4}`
+                        document.getElementById("secao-resultado-3").innerHTML = alteracao3
+                        alteracao4 = `${b4} ± √ ${delta}`
+                        document.getElementById("secao-resultado-4").innerHTML = alteracao4
+                        alteracao5 = `2.${a4}`
+                        document.getElementById("secao-resultado-5").innerHTML = alteracao5
+                        alteracao6 = `${b4} ± ${raiz_delta}`
+                        document.getElementById("secao-resultado-6").innerHTML = alteracao6
+                        alteracao7 = `${2 *a4}`
+                        document.getElementById("secao-resultado-7").innerHTML = alteracao7
+                        alteracao8 = `${b4} + ${raiz_delta}`
+                        document.getElementById("secao-resultado-8").innerHTML = alteracao8
+                        alteracao9 = `${2 * a4}`
+                        document.getElementById("secao-resultado-9").innerHTML = alteracao9
+                        alteracao10 = `${b4 + raiz_delta}`
+                        document.getElementById("secao-resultado-10").innerHTML = alteracao10
+                        alteracao11 = `${2 * a4}`
+                        document.getElementById("secao-resultado-11").innerHTML = alteracao11
+                        alteracao12 = `${b4} - ${raiz_delta}`
+                        document.getElementById("secao-resultado-12").innerHTML = alteracao12
+                        alteracao13 = `${2 * a4}`
+                        document.getElementById("secao-resultado-13").innerHTML = alteracao13
+                        alteracao14 = `${b4 - raiz_delta}`
+                        document.getElementById("secao-resultado-14").innerHTML = alteracao14
+                        alteracao15 = `${b4 - raiz_delta}`
+                        document.getElementById("secao-resultado-15").innerHTML = alteracao15
+                    }
                 }
             }
-        </script>
-        <script>
-            function calcular2() {
-                let bn = parseInt(document.getElementById("bn").value)
-                let delta2 = parseInt(document.getElementById("delta2").value)
-                let a2 = document.getElementById("a2").value
-
-                if (bn > 0) {
-                    bn = -1 * bn
-                } else if (bn < 0) {
-                    bn = -1 * bn
-                }
-
-                if (bn != "" && delta2 != "" && a2 == "") {
-
-                    let texto = `Por favor defina no os três valores afim de achar x1 e x2`
-                    document.getElementById('resultado').innerHTML = texto
-
-                } else if (delta2 < 0) {
-
-                    let texto = `Valor da Raíz não Real`
-                    document.getElementById('resultado').innerHTML = texto
-
-                } else if (bn != "" && delta2 != "" && a2 != "") {
-
-                    a2 = 2 * a2
-                    delta2 = Math.sqrt(delta2, 2)
-                    x1 = (bn + delta2) / a2
-                    x2 = (bn - delta2) / a2
-
-                    let texto = `x' = ${x1} e x" = ${x2}`
-                    document.getElementById('resultado').innerHTML = texto
-                }
-            }
-        </script>
-        <script src="modelo/js/bootstrap.js"></script>
-        <script src="modelo/js/jquery-3.4.1.js"></script>
+        }
+    </script>
+    <script src="js/selecionar.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery-3.4.1.js"></script>
 </body>
 
 </html>
