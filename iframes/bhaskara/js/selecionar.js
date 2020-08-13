@@ -6,7 +6,11 @@ function selecionar() {
     let formula_xis = document.getElementById("formula-xis");
     let ajuda = document.getElementById("ajuda");
     let botao = document.getElementById("botao");
+    let resposta_a = document.getElementById("resposta-a");
+    let resposta_b = document.getElementById("resposta-b");
+    let resposta_c = document.getElementById("resposta-c");
     let resposta_xis = document.getElementById("resposta-xis");
+    let visibilidade = document.getElementById("resposta-xis");
 
     if (select == "") {
         ajuda.style.display = "block"
@@ -15,7 +19,6 @@ function selecionar() {
         formula_b.style.display = "none"
         formula_c.style.display = "none"
         formula_xis.style.display = "none"
-        formula_delta.style.display = "none"
         document.getElementById('b').value = '';
         document.getElementById('c').value = '';
         document.getElementById('delta').value = '';
@@ -40,7 +43,12 @@ function selecionar() {
         document.getElementById('a4').style.border = "black 1px solid";
         document.getElementById('b4').style.border = "black 1px solid";
         document.getElementById('c4').style.border = "black 1px solid";
-
+        resposta_c.style.display = "none"
+        resposta_b.style.display = "none"
+        resposta_c.style.display = "none"
+        resposta_xis.style.display = "none"
+        document.getElementById("area-resultado").style.height = "23.125rem"
+        visibilidade.classList.add("invisivel2");
 
     } else if (select == 'valor-a') {
         ajuda.style.display = "none"
@@ -49,7 +57,6 @@ function selecionar() {
         formula_b.style.display = "none"
         formula_c.style.display = "none"
         formula_xis.style.display = "none"
-        formula_delta.style.display = "none"
         document.getElementById('b').value = '';
         document.getElementById('c').value = '';
         document.getElementById('delta').value = '';
@@ -74,6 +81,12 @@ function selecionar() {
         document.getElementById('a4').style.border = "black 1px solid";
         document.getElementById('b4').style.border = "black 1px solid";
         document.getElementById('c4').style.border = "black 1px solid";
+        resposta_c.style.display = "none"
+        resposta_b.style.display = "none"
+        resposta_c.style.display = "none"
+        resposta_xis.style.display = "none"
+        document.getElementById("area-resultado").style.height = "23.125rem"
+        visibilidade.classList.add("invisivel2");
 
     } else if (select == 'valor-b') {
         ajuda.style.display = "none"
@@ -82,7 +95,6 @@ function selecionar() {
         formula_b.style.display = "block"
         formula_c.style.display = "none"
         formula_xis.style.display = "none"
-        formula_delta.style.display = "none"
         document.getElementById('b').value = '';
         document.getElementById('c').value = '';
         document.getElementById('delta').value = '';
@@ -107,6 +119,12 @@ function selecionar() {
         document.getElementById('a4').style.border = "black 1px solid";
         document.getElementById('b4').style.border = "black 1px solid";
         document.getElementById('c4').style.border = "black 1px solid";
+        resposta_a.style.display = "none"
+        resposta_b.style.display = "none"
+        resposta_c.style.display = "none"
+        resposta_xis.style.display = "none"
+        document.getElementById("area-resultado").style.height = "23.125rem"
+        visibilidade.classList.add("invisivel2");
 
     } else if (select == "valor-c") {
         ajuda.style.display = "none"
@@ -115,7 +133,6 @@ function selecionar() {
         formula_b.style.display = "none"
         formula_c.style.display = "block"
         formula_xis.style.display = "none"
-        formula_delta.style.display = "none"
         document.getElementById('b').value = '';
         document.getElementById('c').value = '';
         document.getElementById('delta').value = '';
@@ -140,16 +157,20 @@ function selecionar() {
         document.getElementById('a4').style.border = "black 1px solid";
         document.getElementById('b4').style.border = "black 1px solid";
         document.getElementById('c4').style.border = "black 1px solid";
+        resposta_a.style.display = "none"
+        resposta_b.style.display = "none"
+        resposta_c.style.display = "none"
+        resposta_xis.style.display = "none"
+        document.getElementById("area-resultado").style.height = "23.125rem"
+        visibilidade.classList.add("invisivel2");
 
     } else if (select == "delta-xis") {
         ajuda.style.display = "none"
-        resposta_xis.style.display = "block"
         botao.style.display = "block"
         formula_a.style.display = "none"
         formula_b.style.display = "none"
         formula_c.style.display = "none"
         formula_xis.style.display = "block"
-        formula_delta.style.display = "block"
         document.getElementById('b').value = '';
         document.getElementById('c').value = '';
         document.getElementById('delta').value = '';
@@ -173,5 +194,11 @@ function selecionar() {
         document.getElementById('delta3').style.border = "black 1px solid";
         document.getElementById('a4').style.border = "black 1px solid";
         document.getElementById('b4').style.border = "black 1px solid";
+        resposta_a.style.display = "none"
+        resposta_b.style.display = "none"
+        resposta_c.style.display = "none"
+        resposta_xis.style.display = "none"
+        document.getElementById("area-resultado").style.height = "23.125rem"
+        visibilidade.classList.add("invisivel2");
     }
 }

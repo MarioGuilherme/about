@@ -1,5 +1,6 @@
 .area-resultado {
     border: black solid 3px;
+    height: 23.125rem;
 }
 
 h2 {
@@ -20,10 +21,6 @@ p {
     font-weight: bold;
 }
 
-.divisor {
-    border-top: 2px black solid;
-}
-
 input {
     text-align: center;
     width: 50px;
@@ -34,10 +31,6 @@ input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
 
-input:focus {
-    background: #94dbff;
-}
-
 .formula {
     padding: 5px;
     border: 1px solid #dee2e6;
@@ -46,12 +39,6 @@ input:focus {
     font-size: 25px;
     font-weight: bold;
     height: 100%;
-}
-
-@media (max-width:775px) {
-    .resultado {
-        margin-top: 1rem;
-    }
 }
 
 .emoji {
@@ -86,7 +73,11 @@ h5 {
 }
 
 .seta {
-    font-size: 29px;
+    font-size: 30px;
+}
+
+.divisores {
+    border-top: 2px solid black;
 }
 
 .resposta-formulacao {
@@ -104,6 +95,55 @@ h5 {
     border-top: 1px black solid;
 }
 
-#caixas {
+#caixas,
+#caixas-2 {
     margin-top: 2.75rem;
+    width: auto;
+    text-align: center;
+}
+
+#resultado-a,
+#resultado-b,
+#resultado-c,
+#resultado-delta,
+#resultado-delta-raiz {
+    width: auto;
+    text-align: center;
+}
+
+@media (max-width:800px) {
+    .resultados-legenda {
+        margin-top: 1rem !important;
+    }
+}
+
+#resultado-a6,
+#resultado-b7,
+#resultado-c8 {
+    padding: 5px;
+}
+
+.invisivel2 {
+    display: none !important;
+}
+
+@media (max-width:800px) {
+    .secao2-res {
+        margin-top: 1rem !important;
+    }
+}
+
+.resultados-responsivel {
+    padding-left: 13px;
+    padding-bottom: 13px;
+}
+
+.resultados-responsivel2 {
+    padding-bottom: 13px;
+    padding-right: 1.875rem;
+    padding-left: 13px;
+}
+
+.xizes {
+    font-size: 18px;
 }
