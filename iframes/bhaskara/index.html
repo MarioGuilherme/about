@@ -165,9 +165,6 @@
                             <p id="resultado-b4">
                                 &nbsp;
                             </p>
-                            <p id="resultado-b5">
-                                &nbsp;
-                            </p>
                             <p id="resultado-b6">
                                 &nbsp;
                             </p>
@@ -478,6 +475,10 @@
 
                 } else {
 
+                    bi = parseFloat((b * 1).toFixed(2))
+                    ci = parseFloat((c * 1).toFixed(2))
+                    delta = parseFloat((delta * 1).toFixed(2))
+
                     bi = b
                     ci = c
 
@@ -499,6 +500,12 @@
 
                     bi_1membro = bi * bi * -1
 
+                    if (delta <= 0) {
+                        sinal2 = ""
+                    } else {
+                        sinal2 = "+"
+                    }
+
                     document.getElementById('b').style.border = "green 2px solid";
                     document.getElementById('c').style.border = "green 2px solid";
                     document.getElementById('delta').style.border = "green 2px solid";
@@ -508,13 +515,13 @@
                     document.getElementById("resultado-a1").innerHTML = resultado_a1
                     resultado_a2 = `${delta} = ${bi * bi} ${sinal} ${ci * -4}a`
                     document.getElementById("resultado-a2").innerHTML = resultado_a2
-                    resultado_a3 = `${bi_1membro} + ${delta} = ${ci * -4}a`
+                    resultado_a3 = `${bi_1membro} ${sinal2} ${delta} = ${ci * -4}a`
                     document.getElementById("resultado-a3").innerHTML = resultado_a3
-                    resultado_a4 = `${bi_1membro + (delta * 1)} = ${ci * -4}a`
+                    resultado_a4 = `${parseFloat((bi_1membro + (delta * 1)).toFixed(2))} = ${ci * -4}a`
                     document.getElementById("resultado-a4").innerHTML = resultado_a4
-                    resultado_a5 = `${bi_1membro + (delta*1)}`
+                    resultado_a5 = `${parseFloat((bi_1membro + (delta*1)).toFixed(2))}`
                     document.getElementById("resultado-a5").innerHTML = resultado_a5
-                    resultado_a6 = `a = ${((bi_1membro + (delta*1)) / (ci * -4))}`
+                    resultado_a6 = `a = ${parseFloat(((bi_1membro + (delta*1)) / (ci * -4).toFixed(2)))}`
                     document.getElementById("resultado-a6").innerHTML = resultado_a6
                     document.getElementById("resultado-a6").style.backgroundColor = "#28a745"
                     resultado_aDivisor = `${ci * -4}`
@@ -540,33 +547,46 @@
 
                     c2 = a2 * c2 * -4
 
-                    if (c2 > 0) {
-                        c2 = -1 * bn
-                    } else if (c2 < 0) {
-                        c2 = -1 * c2
+                    if (c2 >= 0) {
+                        c2 = c2 * -1
+                        sinal3 = "+"
+                        sinal1membro = ""
+                    } else {
+                        c2 = c2 * -1
+                        sinal3 = ""
+                        sinal1membro = "+"
                     }
-                    b2 = delta2 + c2
-                    b2 = Math.sqrt(parseInt(b2), 2)
+
+                    if (deltaII >= 0) {
+                        sinaldelta = "+"
+                    } else {
+                        sinaldelta = ""
+                    }
+
+                    b2 = Math.sqrt((c2 + (deltaII * 1)).toFixed(2))
 
                     document.getElementById('a2').style.border = "green 2px solid";
                     document.getElementById('c2').style.border = "green 2px solid";
                     document.getElementById('delta2').style.border = "green 2px solid";
                     resultado_b1 = `∆ = b² - 4.a.c`
                     document.getElementById("resultado-b1").innerHTML = resultado_b1
-                    resultado_b2 = `${deltaII} = b² - 4.${aII}.${cII}`
+                    resultado_b2 = `${deltaII} = b² -4.${aII}.${cII}`
                     document.getElementById("resultado-b2").innerHTML = resultado_b2
-                    resultado_b3 = `${deltaII} = b² - ${4 * aII * cII}`
+                    resultado_b3 = `${deltaII} = b² ${sinal3} ${-4 * aII * cII}`
                     document.getElementById("resultado-b3").innerHTML = resultado_b3
-                    resultado_b4 = `${4 * aII * cII} + ${deltaII} = b²`
+                    resultado_b4 = `${sinal1membro}${c2} ${sinaldelta} ${deltaII} = b²`
                     document.getElementById("resultado-b4").innerHTML = resultado_b4
-                    resultado_b5 = `${4 * aII * cII} + ${deltaII} = b²`
-                    document.getElementById("resultado-b5").innerHTML = resultado_b5
-                    resultado_b6 = `√${(4 * aII * cII) + deltaII * 1} = √b²`
+                    resultado_b6 = `√${(c2 + (deltaII * 1))} = √b²`
                     document.getElementById("resultado-b6").innerHTML = resultado_b6
-                    resultado_b7 = `b = ${Math.sqrt((4 * aII * cII) + deltaII * 1,2)}`
-                    document.getElementById("resultado-b7").innerHTML = resultado_b7
-                    document.getElementById("resultado-b7").style.backgroundColor = "#28a745"
-                    resposta_b.style.display = "block"
+                    if (c2 + (deltaII * 1) < 0) {
+                        alert("Não é possível encontrar a raíz do número negativo")
+                    } else {
+                        resultado_b7 = `b = ${parseFloat((b2).toFixed(2))}`
+                        document.getElementById("resultado-b7").innerHTML = resultado_b7
+                        let testar_b = document.getElementById("resultado-b7").value
+                        document.getElementById("resultado-b7").style.backgroundColor = "#28a745"
+                        resposta_b.style.display = "block"
+                    }
                 }
 
             } else if (select == "valor-c") {
@@ -594,22 +614,36 @@
                     b3 = delta3 - b3
                     c3 = b3 / a3
 
+                    if (aIII * -4 < 0) {
+                        sinal5 = ""
+                    } else {
+                        sinal5 = "+"
+                    }
+
+                    if (deltaIII <= 0) {
+                        sinal6 = ""
+                    } else {
+                        sinal6 = "+"
+                    }
+
+                    bIIImembro = bIII * bIII * -1
+
                     resultado_c1 = `∆ = b² - 4.a.c`
                     resposta_c.style.display = "block"
                     document.getElementById("resultado-c1").innerHTML = resultado_c1
                     resultado_c2 = `${deltaIII} = ${bIII}² - 4.${aIII}.c`
                     document.getElementById("resultado-c2").innerHTML = resultado_c2
-                    resultado_c3 = `${deltaIII} = ${bIII * bIII} - ${aIII * 4}c`
+                    resultado_c3 = `${deltaIII} = ${bIII * bIII} ${sinal5} ${aIII * -4}c`
                     document.getElementById("resultado-c3").innerHTML = resultado_c3
-                    resultado_c4 = `${bIII * bIII} - ${deltaIII} = -${aIII * 4}c`
+                    resultado_c4 = `${bIIImembro} ${sinal6} ${deltaIII} = ${aIII * -4}c`
                     document.getElementById("resultado-c4").innerHTML = resultado_c4
-                    resultado_c5 = `${(bIII * bIII) - deltaIII} = -${aIII * 4}c`
+                    resultado_c5 = `${(bIIImembro) + deltaIII * 1} = ${aIII * -4}c`
                     document.getElementById("resultado-c5").innerHTML = resultado_c5
-                    resultado_c6 = `${(bIII * bIII) - deltaIII}`
+                    resultado_c6 = `${(bIIImembro) + deltaIII * 1}`
                     document.getElementById("resultado-c6").innerHTML = resultado_c6
                     resultado_c7 = `${aIII * -4}`
                     document.getElementById("resultado-c7").innerHTML = resultado_c7
-                    resultado_c8 = `c = ${((bIII * bIII) - deltaIII) / (aIII * -4)}`
+                    resultado_c8 = `c = ${parseFloat(((bIIImembro) - deltaIII) / (aIII * -4).toFixed(2))}`
                     document.getElementById("resultado-c8").style.backgroundColor = "#28a745"
                     document.getElementById("resultado-c8").innerHTML = resultado_c8
                     document.getElementById('a3').style.border = "green 2px solid";
@@ -628,7 +662,7 @@
 
                 } else {
 
-                    delta = (Math.pow(b4, 2) - (4 * a4 * c4))
+                    delta = parseFloat((Math.pow(b4, 2) - (4 * a4 * c4)).toFixed(2))
 
                     if (delta < 0) {
                         alert("Não Possui Raízes Reais") /* FINALIZAÇÃO DO CÓDIGO, SE SIM*/
@@ -639,7 +673,7 @@
                         c4 = parseFloat((c4 * 1).toFixed(2))
                         delta = parseFloat((delta).toFixed(2))
 
-                        raiz_delta = parseFloat((Math.sqrt(delta * 1, 2)).toFixed(2))
+                        raiz_delta = parseFloat(((Math.sqrt(delta * 1, 2)).toFixed(2)))
 
                         if (raiz_delta % 1 != 0 && !isNaN(raiz_delta % 1)) {
                             alert("AVISO: Raíz Inexata")
@@ -696,7 +730,7 @@
 
                         }
 
-                        if (-4 * a4 * c4 > 0) {
+                        if (-4 * a4 * c4 >= 0) {
                             sinal = "+"
                         } else {
                             sinal = ""
