@@ -1,6 +1,22 @@
+body {
+    background-image: url(../img/fundo.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.rodape-2 {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1030
+}
+
 .area-resultado {
     border: black solid 3px;
-    height: 23.125rem;
+    height: 23.725rem;
+    background-color: rgba(255, 255, 255, 0.904);
 }
 
 h2 {
@@ -8,17 +24,40 @@ h2 {
     text-align: center;
 }
 
+.titulo {
+    font-weight: 700!important
+}
+
 .area-calculo {
     border: black solid 3px;
-    height: 23.125rem;
+    height: 23.725rem;
     padding-left: 15px;
-    padding-right: 10px;
+    padding-right: 15px;
+    background-color: rgba(255, 255, 255, 0.904);
 }
 
 p {
     margin: 0px;
     font-size: 25px;
     font-weight: bold;
+}
+
+.rodape,
+.cabecalho {
+    background-color: #1a1a1a;
+}
+
+.fim {
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+
+.meio {
+    margin-bottom: -4px;
+}
+
+.comeco {
+    margin-top: -9px;
 }
 
 input {
@@ -111,9 +150,16 @@ h5 {
     text-align: center;
 }
 
-@media (max-width:800px) {
+@media (max-width:600px) {
     .resultados-legenda {
         margin-top: 1rem !important;
+    }
+    .rodape-2 {
+        position: relative;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 0;
     }
 }
 
@@ -134,14 +180,20 @@ h5 {
 }
 
 .resultados-responsivel {
-    padding-left: 13px;
-    padding-bottom: 13px;
+    padding-left: 18px;
+    padding-bottom: 15px;
+    padding-top: 12px;
+}
+
+input:focus {
+    background-color: #e6fcea !important;
 }
 
 .resultados-responsivel2 {
-    padding-bottom: 13px;
+    padding-bottom: 15px;
     padding-right: 1.875rem;
-    padding-left: 13px;
+    padding-left: 15px;
+    padding-top: 12px;
 }
 
 .xizes {

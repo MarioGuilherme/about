@@ -47,10 +47,12 @@ function selecionar() {
         resposta_b.style.display = "none"
         resposta_c.style.display = "none"
         resposta_xis.style.display = "none"
-        document.getElementById("area-resultado").style.height = "23.125rem"
+        document.getElementById("area-resultado").style.height = "23.725rem"
         visibilidade.classList.add("invisivel2");
 
     } else if (select == 'valor-a') {
+
+        document.getElementById("rodape").classList.add("rodape-2")
         ajuda.style.display = "none"
         botao.style.display = "block"
         formula_a.style.display = "block"
@@ -85,10 +87,24 @@ function selecionar() {
         resposta_b.style.display = "none"
         resposta_c.style.display = "none"
         resposta_xis.style.display = "none"
-        document.getElementById("area-resultado").style.height = "23.125rem"
+        document.getElementById("area-resultado").style.height = "23.725rem"
         visibilidade.classList.add("invisivel2");
+        document.getElementById("delta").style.backgroundColor = "white";
+        document.getElementById("b").style.backgroundColor = "white";
+        document.getElementById("c").style.backgroundColor = "white";
+        document.getElementById("a2").style.backgroundColor = "white";
+        document.getElementById("c2").style.backgroundColor = "white";
+        document.getElementById("delta2").style.backgroundColor = "white";
+        document.getElementById("a3").style.backgroundColor = "white";
+        document.getElementById("b3").style.backgroundColor = "white";
+        document.getElementById("delta3").style.backgroundColor = "white";
+        document.getElementById("a4").style.backgroundColor = "white";
+        document.getElementById("b4").style.backgroundColor = "white";
+        document.getElementById("c4").style.backgroundColor = "white";
 
     } else if (select == 'valor-b') {
+
+        document.getElementById("rodape").classList.add("rodape-2")
         ajuda.style.display = "none"
         botao.style.display = "block"
         formula_a.style.display = "none"
@@ -123,10 +139,24 @@ function selecionar() {
         resposta_b.style.display = "none"
         resposta_c.style.display = "none"
         resposta_xis.style.display = "none"
-        document.getElementById("area-resultado").style.height = "23.125rem"
+        document.getElementById("area-resultado").style.height = "23.725rem"
         visibilidade.classList.add("invisivel2");
+        document.getElementById("delta").style.backgroundColor = "white";
+        document.getElementById("b").style.backgroundColor = "white";
+        document.getElementById("c").style.backgroundColor = "white";
+        document.getElementById("a2").style.backgroundColor = "white";
+        document.getElementById("c2").style.backgroundColor = "white";
+        document.getElementById("delta2").style.backgroundColor = "white";
+        document.getElementById("a3").style.backgroundColor = "white";
+        document.getElementById("b3").style.backgroundColor = "white";
+        document.getElementById("delta3").style.backgroundColor = "white";
+        document.getElementById("a4").style.backgroundColor = "white";
+        document.getElementById("b4").style.backgroundColor = "white";
+        document.getElementById("c4").style.backgroundColor = "white";
 
     } else if (select == "valor-c") {
+
+        document.getElementById("rodape").classList.add("rodape-2")
         ajuda.style.display = "none"
         botao.style.display = "block"
         formula_a.style.display = "none"
@@ -161,10 +191,24 @@ function selecionar() {
         resposta_b.style.display = "none"
         resposta_c.style.display = "none"
         resposta_xis.style.display = "none"
-        document.getElementById("area-resultado").style.height = "23.125rem"
+        document.getElementById("area-resultado").style.height = "23.725rem"
         visibilidade.classList.add("invisivel2");
+        document.getElementById("delta").style.backgroundColor = "white";
+        document.getElementById("b").style.backgroundColor = "white";
+        document.getElementById("c").style.backgroundColor = "white";
+        document.getElementById("a2").style.backgroundColor = "white";
+        document.getElementById("c2").style.backgroundColor = "white";
+        document.getElementById("delta2").style.backgroundColor = "white";
+        document.getElementById("a3").style.backgroundColor = "white";
+        document.getElementById("b3").style.backgroundColor = "white";
+        document.getElementById("delta3").style.backgroundColor = "white";
+        document.getElementById("a4").style.backgroundColor = "white";
+        document.getElementById("b4").style.backgroundColor = "white";
+        document.getElementById("c4").style.backgroundColor = "white";
 
     } else if (select == "delta-xis") {
+
+        document.getElementById("rodape").classList.add("rodape-2")
         ajuda.style.display = "none"
         botao.style.display = "block"
         formula_a.style.display = "none"
@@ -198,7 +242,19 @@ function selecionar() {
         resposta_b.style.display = "none"
         resposta_c.style.display = "none"
         resposta_xis.style.display = "none"
-        document.getElementById("area-resultado").style.height = "23.125rem"
+        document.getElementById("area-resultado").style.height = "23.725rem"
         visibilidade.classList.add("invisivel2");
+        document.getElementById("delta").style.backgroundColor = "white";
+        document.getElementById("b").style.backgroundColor = "white";
+        document.getElementById("c").style.backgroundColor = "white";
+        document.getElementById("a2").style.backgroundColor = "white";
+        document.getElementById("c2").style.backgroundColor = "white";
+        document.getElementById("delta2").style.backgroundColor = "white";
+        document.getElementById("a3").style.backgroundColor = "white";
+        document.getElementById("b3").style.backgroundColor = "white";
+        document.getElementById("delta3").style.backgroundColor = "white";
+        document.getElementById("a4").style.backgroundColor = "white";
+        document.getElementById("b4").style.backgroundColor = "white";
+        document.getElementById("c4").style.backgroundColor = "white";
     }
 }
