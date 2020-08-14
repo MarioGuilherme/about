@@ -8,20 +8,31 @@
     <title>Calculadora de Bhaskara</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/estilo.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="sweetalert2.all.min.js"></script>
+    <!-- Optional: include a polyfill for ES6 Promises for IE11 -->
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+    <script src="SweetAlert.js"></script>
+    <link rel="shortcut icon" href="img/favicon.png" type="imge/x-icon">
+
 </head>
 
 <body>
-    <div class="container">
 
-        <div class="row mb-2">
-            <div class="col-12 col-md-12 bg-dark">
-                <h1 class="text-light text-center">CALCULADORA DE BHASKARA</h1>
+    <a href="file/bhaskara.apk"></a>
+
+    <div class="container-fluid">
+        <div class="row mb-2 cabecalho">
+            <div class="col-12 col-md-12">
+                <h1 class="text-light  text-center">CALCULADORA DE BHASKARA</h1>
             </div>
         </div>
+    </div>
 
+    <div class="container mb-2">
         <div class="row">
-            <div class="col-12 col-md-4">
-                <h2>
+            <div class="col-12 col-md-4 col-sm-1 col-lg-4">
+                <h2 class="titulo">
                     CÁLCULO
                 </h2>
                 <div class="area-calculo d-flex text-center align-items-center justify-content-center">
@@ -92,17 +103,23 @@
                         </div>
 
                         <div class="col-md-12 col-12 mt-3" id="botao">
-                            <button onclick="calcular()" class="btn btn-outline-success btn-lg">
-                            Calcular
-                        </button>
+                            <button onclick="calcular()" class="btn btn-success btn-lg">
+                                Calcular
+                            </button>
+                        </div>
+                        <div class="col-md-12 col-12 mt-2">
+                            <a href="file/bhaskara.apk" onclick="aviso()">
+                                <button class="btn btn-primary">
+                                    Obtenha a versão App ;)
+                                </button>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="col-md-8 col-12 resultados-legenda">
+            <div class="col-md-8 col-12 col-sm-4 col-lg-8 resultados-legenda">
                 <div>
-                    <h2>
+                    <h2 class="titulo">
                         RESULTADO PASSO A PASSO
                     </h2>
                 </div>
@@ -431,11 +448,29 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
+
+    <div class="card rodape rodape-2" id="rodape">
+        <div class="card-body meio">
+            <h5 class="card-title comeco text-center text-light">Desenvolvido por Mário Guilherme de A. Rodrigues</h5>
+            <h6 class="card-text text-center text-light">Cafelândia - SP, Brasil</h6>
+        </div>
+        <div class="card-footer fim text-center text-light">
+            Todos os Direitos Reservados <br> © 2020-2022
+        </div>
+    </div>
+
     <script>
+        function aviso() {
+            Swal.fire({
+                icon: 'success',
+                title: 'Donwload Relizado',
+                html: 'Após o donwload, permita "Instalar Apps Desconhecidos", e siga as instruções 😉 para conseguir executar essa tecnologia deslumbrante, caso não consiga, contate ao Administrador:' + '<br>' + '<img src="img/whats-logo.png" style="widht: 32px; height: 32px;">' + '<a href="https://wa.me/5514997258378" style="text-decoration: none;">+55 (14) 99725-8378</a>'
+            })
+        }
+
         function calcular() {
 
             let select = document.getElementById("select").value
@@ -470,10 +505,24 @@
                     document.getElementById('b').style.border = "red 2px solid";
                     document.getElementById('c').style.border = "red 2px solid";
                     document.getElementById('delta').style.border = "red 2px solid";
-                    let resultado = `Impossível calcular, por favor insira os três valores requisitados`
-                    document.getElementById("resultado").innerHTML = resultado
+                    document.getElementById("delta").style.backgroundColor = "#ffeff0";
+                    document.getElementById("b").style.backgroundColor = "#ffeff0";
+                    document.getElementById("c").style.backgroundColor = "#ffeff0";
+
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Impossível calcular, por favor insira os três valores requisitados',
+                    })
 
                 } else {
+
+                    document.getElementById("delta").style.backgroundColor = "#d2fcda";
+                    document.getElementById("b").style.backgroundColor = "#d2fcda";
+                    document.getElementById("c").style.backgroundColor = "#d2fcda";
+                    document.getElementById("delta2").style.backgroundColor = "#ffeff0";
+                    document.getElementById("a2").style.backgroundColor = "#ffeff0";
+                    document.getElementById("c2").style.backgroundColor = "#ffeff0";
 
                     bi = parseFloat((b * 1).toFixed(2))
                     ci = parseFloat((c * 1).toFixed(2))
@@ -535,11 +584,21 @@
                     document.getElementById('a2').style.border = "red 2px solid";
                     document.getElementById('c2').style.border = "red 2px solid";
                     document.getElementById('delta2').style.border = "red 2px solid";
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Impossível calcular, por favor insira os três valores requisitados',
+                    })
+                    document.getElementById("delta2").style.backgroundColor = "#ffeff0";
+                    document.getElementById("c2").style.backgroundColor = "#ffeff0";
+                    document.getElementById("a2").style.backgroundColor = "#ffeff0";
 
-                    let resultado = `Impossível calcular, por favor insira os três valores requisitados`
-                    document.getElementById("resultado").innerHTML = resultado
 
                 } else {
+
+                    document.getElementById("delta2").style.backgroundColor = "#d2fcda"
+                    document.getElementById("a2").style.backgroundColor = "#d2fcda"
+                    document.getElementById("c2").style.backgroundColor = "#d2fcda"
 
                     cII = c2
                     aII = a2
@@ -579,7 +638,17 @@
                     resultado_b6 = `√${(c2 + (deltaII * 1))} = √b²`
                     document.getElementById("resultado-b6").innerHTML = resultado_b6
                     if (c2 + (deltaII * 1) < 0) {
-                        alert("Não é possível encontrar a raíz do número negativo")
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: 'Impossível calcular, o valor dentro da raíz é negativo',
+                        })
+
+                        resultado_b72 = `b = Erro`
+                        document.getElementById("resultado-b7").innerHTML = resultado_b72
+                        let testar_b = document.getElementById("resultado-b7").value
+                        document.getElementById("resultado-b7").style.backgroundColor = "#a71d2a"
+                        resposta_b.style.display = "block"
                     } else {
                         resultado_b7 = `b = ${parseFloat((b2).toFixed(2))}`
                         document.getElementById("resultado-b7").innerHTML = resultado_b7
@@ -595,10 +664,22 @@
                     document.getElementById('a3').style.border = "red 2px solid";
                     document.getElementById('b3').style.border = "red 2px solid";
                     document.getElementById('delta3').style.border = "red 2px solid";
-                    let resultado = `Impossível calcular, por favor insira os três valores requisitados`
-                    document.getElementById("resultado").innerHTML = resultado
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Impossível calcular, por favor insira os três valores requisitados',
+                    })
+                    document.getElementById("delta3").style.backgroundColor = "#ffeff0";
+                    document.getElementById("b3").style.backgroundColor = "#ffeff0";
+                    document.getElementById("a3").style.backgroundColor = "#ffeff0";
+
 
                 } else {
+
+
+                    document.getElementById("delta3").style.backgroundColor = "#d2fcda"
+                    document.getElementById("a3").style.backgroundColor = "#d2fcda"
+                    document.getElementById("b3").style.backgroundColor = "#d2fcda"
 
                     aIII = a3
                     bIII = b3
@@ -643,7 +724,7 @@
                     document.getElementById("resultado-c6").innerHTML = resultado_c6
                     resultado_c7 = `${aIII * -4}`
                     document.getElementById("resultado-c7").innerHTML = resultado_c7
-                    resultado_c8 = `c = ${parseFloat(((bIIImembro) - deltaIII) / (aIII * -4).toFixed(2))}`
+                    resultado_c8 = `c = ${parseFloat(((bIIImembro + (deltaIII * 1)) / (aIII * -4)).toFixed(2))}`
                     document.getElementById("resultado-c8").style.backgroundColor = "#28a745"
                     document.getElementById("resultado-c8").innerHTML = resultado_c8
                     document.getElementById('a3').style.border = "green 2px solid";
@@ -657,17 +738,37 @@
                     document.getElementById('a4').style.border = "red 2px solid";
                     document.getElementById('b4').style.border = "red 2px solid";
                     document.getElementById('c4').style.border = "red 2px solid";
-                    let resultado = `Impossível calcular, por favor insira os três valores requisitados`
-                    document.getElementById("resultado").innerHTML = resultado
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Impossível calcular, por favor insira os três valores requisitados',
+                    })
+                    document.getElementById("c4").style.backgroundColor = "#ffeff0";
+                    document.getElementById("b4").style.backgroundColor = "#ffeff0";
+                    document.getElementById("a4").style.backgroundColor = "#ffeff0";
 
                 } else {
 
                     delta = parseFloat((Math.pow(b4, 2) - (4 * a4 * c4)).toFixed(2))
 
                     if (delta < 0) {
-                        alert("Não Possui Raízes Reais") /* FINALIZAÇÃO DO CÓDIGO, SE SIM*/
+                        document.getElementById("rodape").classList.add("rodape-2")
+                        resposta_xis.classList.add("invisivel2")
+                        Swal.fire({
+                            icon: "error",
+                            title: 'AVISO',
+                            text: 'Não Possui Raízes Reais',
+                        })
+                        document.getElementById("area-resultado").style.height = "23.725rem";
+
                     } else {
 
+
+                        document.getElementById("b4").style.backgroundColor = "#d2fcda"
+                        document.getElementById("a4").style.backgroundColor = "#d2fcda"
+                        document.getElementById("c4").style.backgroundColor = "#d2fcda"
+
+                        document.getElementById("rodape").classList.remove("rodape-2")
                         a4 = parseFloat((a4 * 1).toFixed(2))
                         b4 = parseFloat((b4 * 1).toFixed(2))
                         c4 = parseFloat((c4 * 1).toFixed(2))
@@ -676,7 +777,11 @@
                         raiz_delta = parseFloat(((Math.sqrt(delta * 1, 2)).toFixed(2)))
 
                         if (raiz_delta % 1 != 0 && !isNaN(raiz_delta % 1)) {
-                            alert("AVISO: Raíz Inexata")
+                            Swal.fire({
+                                icon: 'warning',
+                                title: 'AVISO',
+                                text: 'O valor da Raíz de Delta será Inexata',
+                            })
                         }
 
                         if (b4 > 0) {
@@ -736,7 +841,6 @@
                             sinal = ""
                         }
 
-
                         alteracao1 = `∆ = ${b4}² -4 . ${a4} . ${c4}`
                         document.getElementById("resolucao-1").innerHTML = alteracao1
                         alteracao2 = `∆ = ${parseFloat((b4*b4).toFixed(2))} ${sinal} ${parseFloat((-4 * a4 * c4).toFixed(2))}`
@@ -745,7 +849,6 @@
                         be4 = b4 * b4
                         alteracao3 = `∆ = ${delta}`
                         document.getElementById("resolucao-3").innerHTML = alteracao3
-
 
                         alteracao4 = `${b2f} ± √ ${delta}`
                         document.getElementById("resolucao-4").innerHTML = alteracao4
