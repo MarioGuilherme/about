@@ -5012,7 +5012,6 @@ input[type=submit].btn-block {
     background-color: #fff;
     background-clip: border-box;
     border: 1px solid rgba(0, 0, 0, .125);
-    border-radius: .25rem
 }
 
 .card>hr {
@@ -8589,6 +8588,10 @@ button.bg-dark:hover {
     margin-left: 3rem!important
 }
 
+.mt-6 {
+    margin-top: 1.125rem !important
+}
+
 .p-0 {
     padding: 0!important
 }
@@ -10498,8 +10501,8 @@ a.text-dark:hover {
 
 @media print {
     *,
-    ::after,
-    ::before {
+     ::after,
+     ::before {
         text-shadow: none!important;
         box-shadow: none!important
     }
