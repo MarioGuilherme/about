@@ -151,7 +151,7 @@ h5 {
     text-align: center;
 }
 
-@media (max-width:600px) {
+@media (max-width:768px) {
     .resultados-legenda {
         margin-top: 1rem !important;
     }
@@ -174,7 +174,7 @@ h5 {
     display: none !important;
 }
 
-@media (max-width:800px) {
+@media (max-width:768px) {
     .secao2-res {
         margin-top: 1rem !important;
     }
@@ -199,4 +199,17 @@ input:focus {
 
 .xizes {
     font-size: 18px;
+}
+
+@media (max-width:320px) {
+    .formula {
+        font-size: 19px;
+    }
+    .formula-xis {
+        font-size: 18px;
+    }
+    input {
+        width: 45px;
+        height: 30px;
+    }
 }
