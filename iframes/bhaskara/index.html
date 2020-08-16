@@ -31,19 +31,22 @@
                 <h2 class="titulo">
                     CÁLCULO
                 </h2>
-                <div class="area-calculo d-flex text-center align-items-center justify-content-center">
+                <div class="area-calculo d-flex text-center align-items-around justify-content-center">
                     <div class="row">
                         <div class="col-md-12 col-12">
                             <select onchange="selecionar()" class="form-control" id="select">
-                            <option value="">INCÓGNITA A SER ENCONTRADA</option>
-                            <option value="valor-a">Valor de a</option>
-                            <option value="valor-b">Valor de b</option>
-                            <option value="valor-c">Valor de c</option>
-                            <option value="delta-xis">Valores de ∆, x1 e x2</option>
-                        </select>
+                                <option value="">INCÓGNITA A SER ENCONTRADA</option>
+                                <option value="valor-a">Valor de a</option>
+                                <option value="valor-b">Valor de b</option>
+                                <option value="valor-c">Valor de c</option>
+                                <option value="delta-xis">Valores de ∆, x1 e x2</option>
+                            </select>
                             <div id="ajuda" class="mt-3">
                                 <h5>
-                                    Selecione acima a incógnita desejada e insira os valores na fórmula a seguir 😉
+                                    Selecione acima a incógnita desejada e insira os valores na fórmula a seguir 😉.
+                                </h5>
+                                <h5>
+                                    Há também uma versão App desta Calculadora. Após a fazer seleção acima, aparecerá um botão para Download.
                                 </h5>
                             </div>
                             <div id="formula-a" class="mt-3 invisivel">
@@ -105,7 +108,7 @@
                         <div class="col-md-12 col-12 mt-2" id="botao2" style="display: none;">
                             <a href="file/bhaskara.apk" onclick="aviso()">
                                 <button class="btn btn-primary">
-                                    Obtenha a versão App ;)
+                                    <img src="img/download.png" style="height: 24px; widows: 24px;" alt="">&nbsp;Obtenha a versão App&nbsp;<img src="img/icone-celular.png" style="height: 24px;" alt="">
                                 </button>
                             </a>
                         </div>
