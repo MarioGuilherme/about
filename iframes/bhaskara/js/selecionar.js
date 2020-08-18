@@ -50,6 +50,7 @@ function selecionar() {
         document.getElementById("area-resultado").style.height = "23.725rem"
         visibilidade.classList.add("invisivel2");
         document.getElementById("botao2").style.display = "none";
+        document.getElementById("rodape").classList.add("rodape-2");
 
     } else if (select == 'valor-a') {
 
@@ -102,6 +103,7 @@ function selecionar() {
         document.getElementById("b4").style.backgroundColor = "white";
         document.getElementById("c4").style.backgroundColor = "white";
         document.getElementById("botao2").style.display = "block";
+        document.getElementById("rodape").classList.add("rodape-2");
 
     } else if (select == 'valor-b') {
 
@@ -154,6 +156,7 @@ function selecionar() {
         document.getElementById("b4").style.backgroundColor = "white";
         document.getElementById("c4").style.backgroundColor = "white";
         document.getElementById("botao2").style.display = "block";
+        document.getElementById("rodape").classList.add("rodape-2");
 
     } else if (select == "valor-c") {
 
@@ -206,6 +209,7 @@ function selecionar() {
         document.getElementById("b4").style.backgroundColor = "white";
         document.getElementById("c4").style.backgroundColor = "white";
         document.getElementById("botao2").style.display = "block";
+        document.getElementById("rodape").classList.add("rodape-2");
 
     } else if (select == "delta-xis") {
 
@@ -257,5 +261,6 @@ function selecionar() {
         document.getElementById("b4").style.backgroundColor = "white";
         document.getElementById("c4").style.backgroundColor = "white";
         document.getElementById("botao2").style.display = "block";
+        document.getElementById("rodape").classList.add("rodape-2");
     }
 }
