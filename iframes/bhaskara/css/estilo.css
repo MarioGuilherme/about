@@ -8,6 +8,7 @@ body {
 .area-resultado {
     border: black solid 3px;
     height: 23.725rem;
+    border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.363);
 }
 
@@ -56,6 +57,7 @@ h1 {
     border: black solid 3px;
     height: 23.725rem;
     padding: 15px;
+    border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.363);
 }
 
