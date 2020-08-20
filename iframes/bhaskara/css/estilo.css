@@ -19,7 +19,6 @@ h2 {
 
 .titulo {
     font-weight: 700!important;
-    background: -webkit-radial-gradient(circle, rgba(6, 1, 1, 1) 0%, rgba(223, 159, 40, 1) 100%);
     background: radial-gradient(circle, rgba(6, 1, 1, 1) 0%, rgba(223, 159, 40, 1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -27,8 +26,7 @@ h2 {
 
 .titulo2 {
     font-weight: 700!important;
-    background: -webkit-radial-gradient(circle, rgba(6, 1, 1, 1) 0%, rgba(223, 159, 40, 1) 100%);
-    background: radial-gradient(circle, rgba(6, 1, 1, 1) 0%, rgba(223, 159, 40, 1) 100%);
+    background: radial-gradient(circle, rgba(6, 1, 1, 1) 0%, rgb(82, 56, 14) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
