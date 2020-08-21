@@ -528,9 +528,6 @@
                     ci = parseFloat((c * 1).toFixed(2))
                     delta = parseFloat((delta * 1).toFixed(2))
 
-                    bi = b
-                    ci = c
-
                     b = Math.pow(b, 2)
                     c = -4 * c
 
@@ -547,7 +544,7 @@
                         sinal = ""
                     }
 
-                    bi_1membro = bi * bi * -1
+                    bi_1membro = parseFloat((bi * bi * -1).toFixed(2))
 
                     if (delta <= 0) {
                         sinal2 = ""
@@ -562,7 +559,7 @@
                     document.getElementById("resultado-a0").innerHTML = resultado_a0
                     resultado_a1 = `${delta} = ${bi}² - 4 . a . ${ci}`
                     document.getElementById("resultado-a1").innerHTML = resultado_a1
-                    resultado_a2 = `${delta} = ${bi * bi} ${sinal} ${ci * -4}a`
+                    resultado_a2 = `${delta} = ${parseFloat(bi * bi).toFixed(2)} ${sinal} ${ci * -4}a`
                     document.getElementById("resultado-a2").innerHTML = resultado_a2
                     resultado_a3 = `${bi_1membro} ${sinal2} ${delta} = ${ci * -4}a`
                     document.getElementById("resultado-a3").innerHTML = resultado_a3
@@ -570,7 +567,7 @@
                     document.getElementById("resultado-a4").innerHTML = resultado_a4
                     resultado_a5 = `${parseFloat((bi_1membro + (delta*1)).toFixed(2))}`
                     document.getElementById("resultado-a5").innerHTML = resultado_a5
-                    resultado_a6 = `a = ${parseFloat(((bi_1membro + (delta*1)) / (ci * -4).toFixed(2)))}`
+                    resultado_a6 = `a = ${parseFloat(((bi_1membro + (delta*1)) / (ci * -4)).toFixed(2))}`
                     document.getElementById("resultado-a6").innerHTML = resultado_a6
                     document.getElementById("resultado-a6").style.backgroundColor = "#28a745"
                     resultado_aDivisor = `${ci * -4}`
@@ -601,9 +598,9 @@
                     document.getElementById("a2").style.backgroundColor = "#d2fcda"
                     document.getElementById("c2").style.backgroundColor = "#d2fcda"
 
-                    cII = c2
-                    aII = a2
-                    deltaII = delta2
+                    cII = parseFloat((c2 * 1).toFixed(2))
+                    aII = parseFloat((a2 * 1).toFixed(2))
+                    deltaII = parseFloat((delta2 * 1).toFixed(2))
 
                     c2 = a2 * c2 * -4
 
@@ -632,11 +629,11 @@
                     document.getElementById("resultado-b1").innerHTML = resultado_b1
                     resultado_b2 = `${deltaII} = b² -4 . ${aII} . ${cII}`
                     document.getElementById("resultado-b2").innerHTML = resultado_b2
-                    resultado_b3 = `${deltaII} = b² ${sinal3} ${-4 * aII * cII}`
+                    resultado_b3 = `${deltaII} = b² ${sinal3} ${parseFloat((-4 * aII * cII).toFixed(2))}`
                     document.getElementById("resultado-b3").innerHTML = resultado_b3
-                    resultado_b4 = `${sinal1membro}${c2} ${sinaldelta} ${deltaII} = b²`
+                    resultado_b4 = `${sinal1membro}${cII} ${sinaldelta} ${deltaII} = b²`
                     document.getElementById("resultado-b4").innerHTML = resultado_b4
-                    resultado_b6 = `√${(c2 + (deltaII * 1))} = √b²`
+                    resultado_b6 = `√${parseFloat((c2 + (deltaII * 1)).toFixed(2))} = √b²`
                     document.getElementById("resultado-b6").innerHTML = resultado_b6
                     if (c2 + (deltaII * 1) < 0) {
                         Swal.fire({
@@ -684,9 +681,9 @@
                     document.getElementById("a3").style.backgroundColor = "#d2fcda"
                     document.getElementById("b3").style.backgroundColor = "#d2fcda"
 
-                    aIII = a3
-                    bIII = b3
-                    deltaIII = delta3
+                    aIII = parseFloat((a3 * 1).toFixed(2))
+                    bIII = parseFloat((b3 * 1).toFixed(2))
+                    deltaIII = parseFloat((delta3 * 1).toFixed(2))
 
                     b3 = Math.pow(b3, 2)
                     a3 = -4 * a3
@@ -710,14 +707,14 @@
                         sinal6 = "+"
                     }
 
-                    bIIImembro = bIII * bIII * -1
+                    bIIImembro = parseFloat((bIII * bIII * -1).toFixed(2))
 
                     resultado_c1 = `∆ = b² -4 . a . c`
                     resposta_c.style.display = "block"
                     document.getElementById("resultado-c1").innerHTML = resultado_c1
                     resultado_c2 = `${deltaIII} = ${bIII}² -4 . ${aIII} . c`
                     document.getElementById("resultado-c2").innerHTML = resultado_c2
-                    resultado_c3 = `${deltaIII} = ${bIII * bIII} ${sinal5} ${aIII * -4}c`
+                    resultado_c3 = `${deltaIII} = ${parseFloat((bIII * bIII).toFixed(2))} ${sinal5} ${aIII * -4}c`
                     document.getElementById("resultado-c3").innerHTML = resultado_c3
                     resultado_c4 = `${bIIImembro} ${sinal6} ${deltaIII} = ${aIII * -4}c`
                     document.getElementById("resultado-c4").innerHTML = resultado_c4
