@@ -11,6 +11,7 @@
     <h2 id='h2'>
         CALCULADORA DE PITÁGORAS
     </h2>
+    <span style="font-size: 20px; color: black;">Deixar o campo que deseja ser encontrado em Branco e em seguida clicar no botão Calcular</span>
     <fieldset id='table2'>
         <table class="table">
             <tr>
@@ -28,43 +29,6 @@
                         </strong>
                     </label>
                 </td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                    <button onclick="calcularA()">Calcular Cateto A</button>
-                </td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                    CATETO A =
-                </td>
-                <td></td>
-                <td>
-                    <p id="valorA"></p>
-                </td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
             </tr>
         </table>
         <br>
@@ -80,43 +44,6 @@
                 <td>
                     <input id="valorXB" type="number">
                 </td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                    <button onclick="calcularB()">Calcular Cateto B</button>
-                </td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                    CATETO B =
-                </td>
-                <td></td>
-                <td>
-                    <p id="valorB"></p>
-                </td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
             </tr>
         </table>
         <br>
@@ -132,92 +59,70 @@
                 <td>
                     <input id="hipoX" type="number">
                 </td>
-                <td></td>
-                <td></td>
-                <td>
-                    <button onclick="calcularHipo()">Calcular Hipotenusa</button>
-                </td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                    HIPOTENUSA =
-                </td>
-                <td></td>
-                <td>
-                    <p id="valorHipo"></p>
-                </td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
             </tr>
         </table>
     </fieldset>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button onclick="calcular()" class="btn-calcular">Calcular</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <span id="resultado" style="font-size: 30px; font-weight: bold; color: green;"> O resultado aparecerá aqui</span>
+    <br><br> <span style="font-size: 50px; font-weight: bold; color: black;">Criado em 3 de Novembro de 2019 por Mário Guilherme</span>
 
 
     <script>
         function calcular() {
 
+            let valorXA = document.getElementById('valorXA').value
             let valorXB = document.getElementById('valorXB').value
             let hipoX = document.getElementById('hipoX').value
 
-            valorXB = Math.pow(valorXB, 2)
-            hipoX = Math.pow(hipoX, 2)
-            x = hipoX - valorXB
-            x = Math.sqrt(x)
+            if (valorXA == '') {
 
-            x = parseFloat(x.toFixed(1))
+                valorXB = Math.pow(valorXB, 2)
+                hipoX = Math.pow(hipoX, 2)
+                x = hipoX - valorXB
+                if (x < 0) {
+                    let texto = `Impossível calcular, não existe raíz de número negativo`
+                    document.getElementById("resultado").innerHTML = texto
 
-            let texto = `${x}`
-            document.getElementById("valorA").innerHTML = texto
+                } else {
+                    x = Math.sqrt(x)
+                    x = parseFloat(x.toFixed(1))
 
-        }
-    </script>
+                    let texto = `Valor de a = ${x}`
+                    document.getElementById("resultado").innerHTML = texto
+                }
 
-    <script>
-        function calcularB() {
+            } else if (valorXB == '') {
 
-            let valorXA = document.getElementById('valorXA').value
-            let hipoX = document.getElementById('hipoX').value
+                valorXA = Math.pow(valorXA, 2)
+                hipoX = Math.pow(hipoX, 2)
+                x = hipoX - valorXA
+                if (x < 0) {
+                    let texto = `Impossível calcular, não existe raíz de número negativo`
+                    document.getElementById("resultado").innerHTML = texto
 
-            valorXA = Math.pow(valorXA, 2)
-            hipoX = Math.pow(hipoX, 2)
-            x = hipoX - valorXA
-            x = Math.sqrt(x)
+                } else {
+                    x = Math.sqrt(x)
 
-            x = parseFloat(x.toFixed(1))
+                    x = parseFloat(x.toFixed(1))
 
-            let texto = `${x}`
-            document.getElementById("valorB").innerHTML = texto
+                    let texto = `Valor de b = ${x}`
+                    document.getElementById("resultado").innerHTML = texto
+                }
 
-        }
-    </script>
+            } else if (hipoX == '') {
 
-    <script>
-        function calcularHipo() {
+                valorXA = Math.pow(valorXA, 2)
+                valorXB = Math.pow(valorXB, 2)
+                x = valorXA + valorXB
+                x = Math.sqrt(x)
 
-            let valorXA = document.getElementById('valorXA').value
-            let valorXB = document.getElementById('valorXB').value
+                x = parseFloat(x.toFixed(1))
 
-            valorXA = Math.pow(valorXA, 2)
-            valorXB = Math.pow(valorXB, 2)
-            x = valorXA + valorXB
-            x = Math.sqrt(x)
-
-            x = parseFloat(x.toFixed(1))
-
-            let texto = `${x}`
-            document.getElementById("valorHipo").innerHTML = texto
-
+                let texto = `Valor de hipotenusa = ${x}`
+                document.getElementById("resultado").innerHTML = texto
+            }
         }
     </script>
 </body>

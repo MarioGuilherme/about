@@ -614,6 +614,7 @@
                         sinal1membro = "+"
                     }
 
+
                     if (deltaII >= 0) {
                         sinaldelta = "+"
                     } else {
@@ -631,7 +632,7 @@
                     document.getElementById("resultado-b2").innerHTML = resultado_b2
                     resultado_b3 = `${deltaII} = b² ${sinal3} ${parseFloat((-4 * aII * cII).toFixed(2))}`
                     document.getElementById("resultado-b3").innerHTML = resultado_b3
-                    resultado_b4 = `${sinal1membro}${cII} ${sinaldelta} ${deltaII} = b²`
+                    resultado_b4 = `${sinal1membro}${c2} ${sinaldelta} ${deltaII} = b²`
                     document.getElementById("resultado-b4").innerHTML = resultado_b4
                     resultado_b6 = `√${parseFloat((c2 + (deltaII * 1)).toFixed(2))} = √b²`
                     document.getElementById("resultado-b6").innerHTML = resultado_b6
@@ -718,7 +719,7 @@
                     document.getElementById("resultado-c3").innerHTML = resultado_c3
                     resultado_c4 = `${bIIImembro} ${sinal6} ${deltaIII} = ${aIII * -4}c`
                     document.getElementById("resultado-c4").innerHTML = resultado_c4
-                    resultado_c5 = `${(parseFloat((bIIImembro) + deltaIII * 1).toFixed(2))} = ${aIII * -4}c`
+                    resultado_c5 = `${(parseFloat((bIIImembro + deltaIII * 1).toFixed(2)))} = ${aIII * -4}c`
                     document.getElementById("resultado-c5").innerHTML = resultado_c5
                     resultado_c6 = `${parseFloat((bIIImembro + deltaIII * 1).toFixed(2))}`
                     document.getElementById("resultado-c6").innerHTML = resultado_c6
@@ -916,8 +917,8 @@
             }
         }
     </script>
-    <script src="js/bootstrap.js"></script>
     <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/bootstrap.js"></script>
     <script src="js/selecionar.js"></script>
 </body>
 

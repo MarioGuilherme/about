@@ -11,84 +11,96 @@
     <h1>
         Calculadora do Trapézio
     </h1> <br><br>
-    <div id="ex">
-        <h3>EXEMPLO DA FÓRMULA</h3>
-        <div id="img">
-            <img id="desenho" src="desenho.png">
-        </div>
-        <div id="base">
+    <div class="grupo">
+        <div id="ex">
+            <h3>EXEMPLO DA FÓRMULA</h3>
             <table>
                 <tr>
-                    <tr>
-                        <td rowspan="3" id="dividendo1">A</td>
-                        <td rowspan="3" id="dividendo1">=</td>
-                        <td id="dividendo">(B+b).h</td>
+                    <td>
+                        <img id="desenho" src="desenho.png">
+                    </td>
+                    <td>
+                        <table>
+                            <tr>
+                                <tr>
+                                    <td rowspan="3" id="dividendo1">A</td>
+                                    <td rowspan="3" id="dividendo1">=</td>
+                                    <td id="dividendo">(B+b).h</td>
+                                </tr>
+                                <tr>
+                                    <td id="divisor1">
+                                        2
+                                    </td>
+                                </tr>
+                        </table>
+                    </td>
                     </tr>
                     <tr>
-                        <td id="divisor1">
-                            2
+                        <td></td>
+                        <td colspan="2">
+                            <table id="sig">
+                                <tr>
+                                    <td>
+                                        <font id="font">A</font>
+                                        <font id="font1"> = Área</font>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <font id="font">B</font>
+                                        <font id="font1"> = Base Maior</font>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <font id="font">b</font>
+                                        <font id="font1"> = Base Menor</font>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <font id="font">h</font>
+                                        <font id="font1"> = Altura</font>
+                                    </td>
+                                </tr>
+                            </table>
                         </td>
                     </tr>
             </table>
-            <div id="ext">
-                <table id="sig">
+        </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div id="calc">
+            <h3>
+                CALCULADORA
+            </h3>
+            <span style="font-size: 23px; font-weight:bold; color: black;">Deixei em branco o campo que você deseja encontrar e em seguida clique em Calcular</span>
+            <center>
+                <table id="tab-calc">
                     <tr>
-                        <td>
-                            <font id="font">A</font>
-                            <font id="font1"> = Área</font>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <font id="font">B</font>
-                            <font id="font1"> = Base Maior</font>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <font id="font">b</font>
-                            <font id="font1"> = Base Menor</font>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <font id="font">h</font>
-                            <font id="font1"> = Altura</font>
-                        </td>
-                    </tr>
+                        <tr>
+                            <td rowspan="3"><input id="A" type="number"></td>
+                            <td rowspan="3">=</td>
+                            <td>(<input id="B" type="number"> + <input type="number" id="b">).<input type="number" id="h"></td>
+                        </tr>
+                        <tr>
+                            <td id="s">2
+                            </td>
+                        </tr>
                 </table>
-            </div>
-        </div>
-    </div>
-    <div id="calc">
-        <h3>
-            CALCULADORA
-        </h3>
-        <center>
-            <table>
-                <tr>
-                    <tr>
-                        <td rowspan="3"><input id="A" type="number"></td>
-                        <td rowspan="3">=</td>
-                        <td>(<input id="B" type="number"> + <input type="number" id="b">).<input type="number" id="h"></td>
-                    </tr>
-                    <tr>
-                        <td id="s">2
-                        </td>
-                    </tr>
-            </table>
-        </center>
-        <br><br>
-        <center>
-            <button id="botao" onclick="calcular()">
+            </center>
+            <br><br>
+            <center>
+                <button id="botao" onclick="calcular()">
                 Calcular 
             </button>
-        </center>
-        <h4>
-            RESULTADO:
-        </h4>
-        <p id="resultado">.</p>
+            </center>
+            <h4>
+                RESULTADO:
+            </h4>
+            <p id="resultado">.</p>
+        </div>
     </div>
+    <p style="font-size: 40px; font-weight: bold;text-align: center; color: black;margin-bottom: 10px !important">Criado em 5 de Novembro de 2019 por Mário Guilherme</p>
 
     <script>
         function calcular() {

@@ -4,212 +4,321 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mário Guilherme</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Mário Guilherme | Portfólio</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/estilo.css">
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-sm navbar-dark fixed-top">
-        <button class="navbar-toggler botao-navbar" type="button" data-toggle="collapse" data-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <header>
+        <a href="#" class="logo">Portfólio</a>
+        <div class="toggle" onclick="toggleMenu()"></div>
+        <ul class="menu">
+            <li>
+                <a href="#menu" onclick="toggleMenu()">Menu</a>
+            </li>
+            <li>
+                <a href="#sobre" onclick="toggleMenu()">Sobre</a>
+            </li>
+            <li>
+                <a href="#servicos" onclick="toggleMenu()">Habilidades</a>
+            </li>
+            <li>
+                <a href="#trabalho" onclick="toggleMenu()">Projetos</a>
+            </li>
+            <li>
+                <a href="#formacao" onclick="toggleMenu()">Formação</a>
+            </li>
+            <li>
+                <a href="#contato" onclick="toggleMenu()">Contato</a>
+            </li>
+        </ul>
+    </header>
 
-        <div class="collapse navbar-collapse" id="navbarsExample03">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link botoes-navbar" href="#sobre">SOBRE</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link botoes-navbar" href="#portfolio">PORTFÓLIO</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link botoes-navbar" href="#projetos">PROJETOS</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link botoes-navbar" href="#contato">CONTATO</a>
-                </li>
-            </ul>
+    <section class="banner" id="menu">
+        <div class="textBx">
+            <h2>
+                Olá!, eu sou
+                <br> <span> Mário Guilherme </span> </h2>
+            <h3>
+                Eu sou Técnico em Desenvolvimento de Sistemas
+            </h3>
+            <a href="#sobre" class="btn">Sobre mim</a>
         </div>
-    </nav>
+    </section>
 
-    <div class="container-fluid">
-        <div class="row jumbotron-linha">
-            <div class="col-12 align-self-center col-md-12 text-center">
-                <h1 class="display-4 font-weight-bold text-light">Mário Guilherme de Andrade Rodrigues</h1>
-                <h5 class="text-light">Técnico em Desenvolvimento de Sistemas</h5>
-            </div>
+    <section class="sobre" id="sobre">
+        <div class="titulo">
+            <h2>
+                Sobre mim
+            </h2>
         </div>
-        <div class="row" id="sobre">
-            <div class="col-12 col-md-6">
-                <h3 class="mt-5 text-light font-weight-bold text-center mb-2">
-                    SOBRE MIM
-                </h3>
-            </div>
-            <div class="col-12 col-md-6">
-                <p class="text-light text-justify">
-                    Estudante dos cursos Técnico em Agropecuária Integrado ao Ensino Médio e Técnico em Desenvolvimento de Sistemas na Instituição ETEC Professora Helcy Moreira Martins Aguiar, na cidade de Cafelândia, São Paulo. Sou de uma formação mais centrada ao BACK-END,
-                    sendo mais apto ao Web Service, como criação de Banco de Dados com MySQL e tendo um gosto maior por lógica de programação como as linguagens PHP e JavaScript, e <strong>futuramente</strong> Python.
+        <div class="conteudo">
+            <div class="conteudoBx w50">
+                <h3>Apresentação</h3>
+                <p>
+                    Olá, meu chamo <strong> Mário Guilherme de Andrade Rodrigues</strong>, sou estudante dos cursos Técnico em Agropecuária Integrado ao Ensino Médio e Técnico em Desenvolvimento de Sistemas na Instituição <strong>ETEC Professora
+                    Helcy Moreira Martins Aguiar</strong>, na cidade de Cafelândia, São Paulo. <br> <br> A Minha formação de dentro do processo de Desenvolver Sistemas começa, havendo a área do <strong>Front-End, </strong> que é a parte visível, como
+                    páginas com
+                    <strong>
+                    HTML e CSS </strong>, ou seja, parte visível, e ao a outra parte, cujo eu estou mais apto, área do <strong> Back-End </strong>, que seria os processos invisíveis que tem funcionalidade de manuseio e troca de informações
+                    e dados com uso de <strong> PHP, MySQL, Json, Ajax no JS.</strong> E em processo de estudo da linguagem <strong>Python.</strong>
                 </p>
             </div>
-        </div>
-
-        <div class="row" id="portfolio">
-            <div class="col-12 col-md-12">
-                <h1 class="mt-2 text-center font-weight-bold">
-                    PORTFÓLIO
-                </h1>
-            </div>
-            <div class="col-12 col-md-12">
-                <h4 class="mt-3 ml-3 font-weight-bold">
-                    Formações e Competências
-                </h4>
-            </div>
-            <div class="col-12 conquistas font-weight-bold col-md-5">
-                <ul>
-                    <li>Ensino Fundamental Completo</li>
-                    <li>Lingua Moderna Inglesa nível Médio</li>
-                    <li>Curso de Corel Draw Essencial no DoutorByte</li>
-                    <li>Curso de Operador de Computador no Prepara Cursos</li>
-                    <li>Conhecimento intermediário do Pacote Office Windows 2017</li>
-                    <li>Digitação Intermediária</li>
-                    <li>Vitória no EtechDay como <a data-toggle="modal" class="links" href="#arduino">arduíno</a> no dia 19 de Outubro de 2019</li>
-                    <li>Conhecimento e Técnicas da manutenção do Windows</li>
-                    <li>Editor de Vídeos no Filmora9</li>
-                    <li>Editor de fotos no PhotoShop</li>
-                    <li>Editor de imagens Vetorizadas no Corel Draw</li>
-                </ul>
-            </div>
-            <div class="col-12 col-md-7 text-center">
-                <img class="logos" src="img/logos.png" alt="">
+            <div class="w50">
+                <img src="img/img-back.png" class="">
             </div>
         </div>
-        <div class="row habilidades">
-            <div class="col-12 col-md-12">
-                <h4 class="mt-3 ml-3 font-weight-bold">
-                    Habilidades
-                </h4>
+    </section>
+
+    <section class='servicos' id="servicos">
+        <div class="titulo branco">
+            <h2>Habilidades</h2>
+            <p>
+                Algumas das coisas que consigo criar e realizar com algumas ferramentas em mãos e com tempo sobrando.
+            </p>
+        </div>
+        <div class="conteudo">
+            <div class="servicosBx" data-toggle="modal" data-target="#dev-web">
+                <img src="img/icon1.png">
+                <h2>Desenvolvedor Web</h2>
+                <p>Criação de sistemas simples que buscam ajudar e resolver problemas com a digitalização básicas de ideias Web com HTML, CSS, JavaScript, PHP, Json, MySQL e Ajax.</p>
             </div>
-            <div class="col-md-12 col-12 justify-content-center">
-                <div class="row text-center mt-3 ml-3">
-                    <div class="col-12 col-md-4">
-                        <img class="graficos" src="img/grafico-javascript.png" alt="">
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <img class="graficos" src="img/grafico-photoshop.png" alt="">
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <img class="graficos" src="img/grafico-webdesigner.png" alt="">
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <img class="graficos" src="img/grafico-html-css.png" alt="">
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <img class="graficos" src="img/grafico-apps.png" alt="">
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <img class="graficos" src="img/grafico-filmora.png" alt="">
-                    </div>
-                </div>
+            <div class="servicosBx" data-toggle="modal" data-target="#pag-pers">
+                <img src="img/icon2.png">
+                <h2>Páginas Pessoais</h2>
+                <p> Desenvolver páginas como Portfólios ou Currículos na Web, procurando demonstrar interesses, histórias, e ideias ou até mesmo, disponibilizar filmes para pessoas curtir-lás.</p>
+            </div>
+            <div class="servicosBx" data-toggle="modal" data-target="#pag-pers">
+                <img src="img/icon3.png">
+                <h2>Criação de Banco de Dados</h2>
+                <p>Criação de Banco de Dados para armazenamento de informações de determinada situação, muito usado no desenvolvimento de Sistemas Web.</p>
+            </div>
+            <div class="servicosBx" data-toggle="modal" data-target="#servico-3">
+                <img src="img/icon4.png">
+                <h2>Técnicas de Manutenção</h2>
+                <p>É de sempre que o Windows apresenta erros em sua composição, e com algumas técnicas de reparos, melhorias e configurações para otimização desses erros.</p>
+            </div>
+            <div class="servicosBx" data-toggle="modal" data-target="#servico-4">
+                <img src="img/icon5.png">
+                <h2>Edição de Imagem</h2>
+                <p>Edição de imagens/fotos com uso do PhotoShop, que vai desde edição de cores, sombras, textos, mesclagem e outros, e criação de imagens vetorizadas com o CorelDraw X5.</p>
+            </div>
+            <div class="servicosBx" data-toggle="modal" data-target="#servico-5">
+                <img src="img/icon6.png">
+                <h2>Edição de Vídeo</h2>
+                <p>Criação e edição de vídeos do zero ou inserção de animações, música, conteúdo escrito e muito mais para enriquecer um vídeo com informações e ter uma grande persuasão com WonderShare 9 e Vegas Pro 17.0.</p>
             </div>
         </div>
-        <div id="projetos" class="row projetos">
-            <div class="col-12 col-md-12">
-                <h1 class="mt-2 text-center font-weight-bold">
-                    PROJETOS
-                </h1>
+    </section>
+
+
+    <section class="trabalho" id="trabalho">
+        <div class="titulo">
+            <h2>Últimos Projetos</h2>
+            <p>Alguns dos meus últimos projetos e trabalhos realizados nos últimos tempos, clique sobre eles e então veja-os e interaja</p>
+        </div>
+        <div class="conteudo">
+            <div class="trabalhoBx">
+                <a href="iframes/bhaskara/index.html">
+                    <img src="img/bhaskara.png">
+                </a>
             </div>
-            <div class="col-md-12 col-12 text-center">
-                <h2 class="text-light">
-                    CALCULADORA DE BHASKARA, 3 Dez 2019 - 31 Mar 2020
-                </h2>
-                <iframe src="iframes/bhaskara/index.html" width="94%" height="657.39px"></iframe>
-
-                <h2 class="text-light mt-5">
-                    CALCULADORA DE TRAPÉZIO, 4 Nov 2019
-                </h2>
-                <iframe src="iframes/trapezio/index.html" width="94%" height="800px"></iframe>
-
-                <h2 class="text-light mt-5">
-                    CALCULADORA DE PITÁGORAS, 3 Nov 2019
-                </h2>
-                <iframe src="iframes/pitagoras/index.html" width="94%" height="350px"></iframe>
-
-                <h2 class="text-light mt-5">
-                    PIXELART INTERATIVO, 19 Abr 2020
-                </h2>
-                <iframe src="iframes/pixelart-interativo/index.html" width="94%" height="750px"></iframe>
-
-                <h2 class="text-light mt-5">
-                    CALCULADORA DO 1º GRAU, 2 Nov 2019
-                </h2>
-                <iframe src="iframes/calculadora-1grau/index.html" width="94%" height="500px"></iframe>
+            <div class="trabalhoBx">
+                <a href="iframes/trapezio/index.html">
+                    <img src="img/trapezio.png">
+                </a>
+            </div>
+            <div class="trabalhoBx">
+                <a href="iframes/pitagoras/index.html">
+                    <img src="img/pitagoras.png">
+                </a>
+            </div>
+            <div class="trabalhoBx">
+                <a href="iframes/pixelart-interativo/index.html">
+                    <img src="img/pixelart.png">
+                </a>
             </div>
         </div>
-    </div>
+    </section>
 
+    <section class="formacao" id="formacao">
+        <div class="titulo">
+            <h2>Formação</h2>
+            <p>Formações que vai de cursos concluídos até nível de conhecimento com algumas ferramentas e linguagens computacionais.</p>
+        </div>
+        <div class="conteudo">
+            <div class="formacaoBx">
+                <img src="img/formacao.png" width="80px">
+                <h2>Corel Draw Essencial X5</h2>
+                <p>Criação de desenhos vetorizadas que privam no quesito de qualidade de imagem, usado para fazer logos de empresas, design gráficos de desenhos a lápis e outros.</p>
+                <h3>Concluído no DoutorByte<br> <span> Cafelândia - Jan 2016</span> </h3>
+            </div>
+            <div class="formacaoBx">
+                <img src="img/formacao.png" width="80px">
+                <h2>Operador de Computador</h2>
+                <p>Focado especialmente nas ferramentas do Pacote Office do Windows que inclue o Microsoft Word, PowerPoint e Excel, incluindo a prática, apresentação e conceitos.</p>
+                <h3>Concluído no Prepara Cursos<br> <span> Cafelândia - Jul 2015</span> </h3>
+            </div>
+            <div class="formacaoBx">
+                <p style="text-align: center;">
+                    <img src="img/html5.png" width="150px"></p>
+                <h2>HTML5/CSS</h2>
+                <p>Linguagem de Marcação para desenvolvimento Web, sendo ele, o esqueleto da página.</p>
+                <br>
+                <img src="img/html-grafico.svg" alt="">
+            </div>
+            <div class="formacaoBx">
+                <p style="text-align: center;">
+                    <img src="img/js-icon.png" width="150px"></p>
+                <h2>JavaScript</h2>
+                <p>Linguagem usada para scripts responsáveis pela interatividade e dinamicidade em um site.</p>
+                <br>
+                <img src="img/js-grafico.svg" alt="">
+            </div>
+            <div class="formacaoBx">
+                <p style="text-align: center;">
+                    <img src="img/bootstrap-logo.png" width="150px"></p>
+                <h2>BootStrap 5</h2>
+                <p>FrameWork do HTML e CSS incluindo JQuery o que facilita o desenvolvimento Web.</p>
+                <br>
+                <img src="img/bootstrap-grafico.svg" alt="">
+            </div>
+            <div class="formacaoBx">
+                <p style="text-align: center;">
+                    <img src="img/photoshop-icon.png" width="150px"></p>
+                <h2>PhotoShop 2018</h2>
+                <br>
+                <p>Editor de fotos profissionais e com ferramentas poderosas capaz de fazer mudanças eminentes da impercepção humana.</p>
+                <br>
+                <img src="img/photoshop-grafico.svg" alt="">
+            </div>
+            <div class="formacaoBx">
+                <p style="text-align: center;">
+                    <img src="img/corel-logo.png" width="150px"></p>
+                <h2>Corel Draw Essencial X5</h2>
+                <br>
+                <p>Como dito antes, usado para criação de imagens e desenhos vetorizados privando a qualidade de imagem.</p>
+                <br>
+                <img src="img/coreldraw-grafico.svg" alt="">
+            </div>
+            <div class="formacaoBx">
+                <p style="text-align: center;">
+                    <img src="img/filmora-icon.png" width="150px"></p>
+                <h2>Filmora 9</h2>
+                <br>
+                <p>Editor de Vídeo muito usado por profissionais no cenário cinematográfico, com fácil interface e gestão de projetos.</p>
+                <br>
+                <img src="img/filmora-grafico.svg" alt="">
+            </div>
+            <div class="formacaoBx">
+                <p style="text-align: center;">
+                    <img src="img/ingles-icon.png" width="150px"></p>
+                <h2>Língua Inglesa</h2>
+                <br>
+                <p>Língua Inglesa, conhecida como a língua mais popular no mundo, porém não é a mais falada, porém é considerada a língua global.</p>
+                <br>
+                <img src="img/ingles-grafico.svg" alt="">
+            </div>
+            <div class="formacaoBx">
+                <p style="text-align: center;">
+                    <img src="img/github-icon.png" width="150px;"></p>
+                <h2>GitHub</h2>
+                <br>
+                <p>Plataforma de Código aberto, usado para postar repositórios afim de ajudar a comunidade e partilhar ideias.</p>
+                <br>
+                <img src="img/github-grafico.svg" alt="">
+            </div>
+        </div>
+    </section>
 
-    <!-------------------------------------------------------JANELA MODAIS------------------------------------>
-    <div id="arduino" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="my-modal-title" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content ard">
-                <div class="modal-header justify-content-center">
-                    <h1 class="modal-title font-weight-bold" id="my-modal-title">Arduíno</h1>
-                </div>
-                <div class="modal-body modal-1">
-                    <div class="row">
-                        <div class="col-12 col-md-12">
+    <section class="contato" id='contato'>
+        <div class="titulo branco">
+            <h2>Contato</h2>
+            <p>Entre em contato comigo, pelo celular, email, acesse minhas redes sociais, deixe uma mensagem, sua opinião, seu like e a sua nota.</p>
+        </div>
+        <div class="conteudo">
+            <div class="contatoInfo">
+                <h3>Informações para Contato</h3>
+                <div class="contatoInfoBx">
+                    <div class="box">
+                        <div class="icone">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <div class="texto">
+                            <h3>Celular</h3>
+                            <p>+55 (14) 99725-8378</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icone">
+                            <i class="fa fa-envelope-o"></i>
+                        </div>
+                        <div class="texto">
+                            <h3>Email</h3>
+                            <p class="emails">
+                                marioguietec@gmail.com <br> mariogui167@gmail.com <br> mariogui167@hotmail.com
+                            </p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icone">
+                            <i class="fa fa-user-circle"></i>
+                        </div>
+                        <div class="texto">
+                            <h3>Redes Sociais</h3>
                             <p>
-                                Plataforma de prototipagem eletrônica de hardware livre e de placa única, projetada com um microcontrolador Atmel AVR com suporte de entrada/saída embutido, uma linguagem de programação padrão, a qual tem origem em Wiring, e é essencialmente C/C++
-                            </p>
-                            <p class="text-center">
-                                <img class="img-thumbnail justify-content-center" src="img/arduino.jpg" alt="">
-                            </p>
-                            <hr>
-                            <h2>
-                                Meu papel no EtechDay
-                            </h2>
-                            <p>
-                                A minha participação no EtechDay no dia 19 de Outubro de 2019, fiz parte da equipe fazendo o papel de arduíno, para a apresentação do Pitch como avaliação final, desenvolvido um sistema que determinar a temperatura local para o projeto no qual buscava
-                                o bem estar à avicultura.
+                                <a href="https://www.facebook.com/marioguilherme.rodrigues/ " target="_blank "><i class="fa fa-facebook-square rs "></i></a>
+                                <a href="https://www.instagram.com/mario_guilherme87/"><i class="fa fa-instagram rs "></i></a>
+                                <a href="https://github.com/MarioGuilherme " target="_blank "><i class="fa fa-github rs "></i></a>
                             </p>
                         </div>
                     </div>
-                    <div class="row text-center">
-                        <div class="col-12 foto-video col-md-6">
-                            <img class="img-etechday img-thumbnail" src="img/arduino-etechday.jpeg" alt="">
-                        </div>
-                        <div class="col-12 foto-video col-md-6">
-                            <video controls class="img-etechday" src="video/video-arduino.mp4"></video>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer modal-fim">
-                    <button class="btn btn-danger" data-dismiss="modal" type="button">FECHAR</button>
                 </div>
             </div>
+            <div class="formBx">
+                <form id='form-contato'>
+                    <h3>Me deixe uma mensagem</h3>
+                    <input name="nome" type="text" class='input' placeholder="Nome">
+                    <input name="email" type="email" class='input' placeholder="Email (não obrigatório)">
+                    <textarea name="msg" placeholder="Sua mensagem" class="input"></textarea>
+                    <h5>O que achou?</h5>
+                    <span>
+                    <button type="button" class="like"><img src="img/like.png"></button>
+                    <button type="button" class="deslike"><img src="img/deslike.png"></button></span>
+                    <h5>Sua nota de 0 à 10</h5>
+                    <div class="notas">
+                        <button value="0" class="btn-nota-0">0</button>
+                        <button value="1" class="btn-nota-1">1</button>
+                        <button value="2" class="btn-nota-2">2</button>
+                        <button value="3" class="btn-nota-3">3</button>
+                        <button value="4" class="btn-nota-4">4</button>
+                        <button value="5" class="btn-nota-5">5</button>
+                        <button value="6" class="btn-nota-6">6</button>
+                        <button value="7" class="btn-nota-7">7</button>
+                        <button value="8" class="btn-nota-8">8</button>
+                        <button value="9" class="btn-nota-9">9</button>
+                        <button value="10" class="btn-nota-10">10</button>
+                        <input type="text" name="voto" class="inpt-likes" style="display: none;">
+                        <input type="text" name="nota" class="inpt-nota" style="display: none;">
+                    </div>
+                    <input type="submit" class="btn-enviar" value="Enviar">
+                </form>
+            </div>
         </div>
+    </section>
+
+    <div class="copyright ">
+        <p>Desenvolvido e Escrito por <br> Mário Guilherme de A. Rodrigues <br> Copyright &copy; 2020. Todos os Direitos Reservados</p>
     </div>
 
-    </div>
-
-    <!--------------------------------------------------------RODAPÉ---------------->
-    <div class="card rodape text-center">
-        <div class="card-body">
-            <h5 class="card-title text-light">Desenvolvido por Mário Guilherme de Andrade Rodrigues</h5>
-            <p class="card-text text-light">Cafelândia - SP, Brasil</p>
-        </div>
-        <div class="card-footer text-light">
-            Todos os Direitos Reservados <br> © 2020-2022
-        </div>
-    </div>
-    <!--------------------------------------------------------RODAPÉ---------------->
-
-    <script src="js/jquery-3.5.1.min.js"></script>
-    <script src="js/grafico-photoshop.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/contato.js"></script>
 </body>
+
+</html>
 
 </html>

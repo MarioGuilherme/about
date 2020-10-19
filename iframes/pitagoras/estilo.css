@@ -11,6 +11,12 @@ body {
     background-color: lightgrey;
 }
 
+.calcular {
+    background-color: rgb(26, 202, 35);
+    margin-top: 5px;
+    border-radius: 20%;
+}
+
 h2 {
     background: -webkit-linear-gradient(top, #9c8F67, #c7be9b 30%);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -25,10 +31,23 @@ h2 {
 #table2 {
     border: 3px black solid;
     border-radius: 2em;
-    width: 653px;
+    width: auto;
     background: chocolate;
 }
 
 #valorX1 {
     font-weight: bold;
+}
+
+@media (min-width:600px) {
+    * {
+        font-size: 30px;
+        font-weight: bold;
+    }
+    #table2 {
+        width: 90%;
+    }
+    .table {
+        width: 100%;
+    }
 }

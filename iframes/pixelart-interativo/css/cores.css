@@ -5,6 +5,7 @@ body {
 .grade {
     width: 720px;
     height: 720px;
+    padding-right: 30px;
 }
 
 .pixel {
