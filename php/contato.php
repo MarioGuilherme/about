@@ -15,7 +15,7 @@
         exit;
     } else{
 
-        $sql = "INSERT INTO contatadores (nome, email, mensagem, nota, voto) VALUES ('$requestData[nome]', '$requestData[email]', '$requestData[msg]', '$requestData[nota]', '$requestData[voto]')";
+        $sql = "INSERT INTO contatadores (nome, email, mensagem, nota, voto, ip) VALUES ('$requestData[nome]', '$requestData[email]', '$requestData[msg]', '$requestData[nota]', '$requestData[voto]')";
 
     }
 

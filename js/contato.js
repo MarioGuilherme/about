@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
     $('.notas button, .like, .deslike').click(function(e) {
         e.preventDefault()
     })
@@ -180,6 +181,13 @@ $(document).ready(function() {
     $('.like').click(function() {
         var voto = 'Like'
         $('.inpt-likes').val(voto)
+        $.ajax({
+            type: 'POST',
+            dataType: 'json',
+            url: 'php/contador.php',
+            async: true,
+            data: dados
+        });
     })
     $('.deslike').click(function() {
         var voto = 'Deslike'
