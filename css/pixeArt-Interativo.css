@@ -15,6 +15,10 @@ body {
     float: left;
 }
 
+.btn-voltar {
+    font-size: 1.5em;
+}
+
 .paleta {
     display: inline-block;
     width: 45px;
