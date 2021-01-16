@@ -761,7 +761,6 @@
                     delta = parseFloat((Math.pow(b4, 2) - (4 * a4 * c4)).toFixed(2))
 
                     if (delta < 0) {
-                        document.getElementById("rodape").classList.add("rodape-2")
                         resposta_xis.classList.add("invisivel2")
                         Swal.fire({
                             icon: "error",
@@ -776,7 +775,6 @@
                         document.getElementById("b4").style.backgroundColor = "#d2fcda"
                         document.getElementById("a4").style.backgroundColor = "#d2fcda"
                         document.getElementById("c4").style.backgroundColor = "#d2fcda"
-                        document.getElementById("rodape").classList.remove("rodape-2")
                         a4 = parseFloat((a4 * 1).toFixed(2))
                         b4 = parseFloat((b4 * 1).toFixed(2))
                         c4 = parseFloat((c4 * 1).toFixed(2))
